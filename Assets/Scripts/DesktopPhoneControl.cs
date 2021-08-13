@@ -17,14 +17,14 @@ public class DesktopPhoneControl : MonoBehaviour
 
     private void OnEnable()
     {
-        indexCurent = PlayerPrefs.GetInt("dcsphne", 0);
+        indexCurent = PlayerPrefs.GetInt("phoneBack", 0);
         image.sprite = allSpritesPhones[indexCurent];
     }
 
     public void UpdateCurrentIndex(int getIndex)
     {
         indexCurent = getIndex;
-        PlayerPrefs.SetInt("dcsphne", indexCurent);
+        PlayerPrefs.SetInt("phoneBack", indexCurent);
         image.sprite = allSpritesPhones[indexCurent];
 
     }

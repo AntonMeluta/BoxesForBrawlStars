@@ -7,13 +7,6 @@ public class RaysAnimation : MonoBehaviour
 
     public float speedRotate = 10;
 
-
-    private void Start()
-    {
-        
-    }
-
-
     private void Update()
     {
         transform.Rotate(0, 0, speedRotate);

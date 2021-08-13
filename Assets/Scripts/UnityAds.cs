@@ -7,14 +7,12 @@ using UnityEngine.Networking;
 using SimpleJSON;
 using UnityEngine.Advertisements;
 
-public class UnityAds : MonoBehaviour
-{
+public class UnityAds : MonoBehaviour{
 
     //rateUs
     int isRateUS;
     public GameObject rateUsObj;    
     public string rateUsRef;
-
 
     int toPrmReqst = 0;
     string getString = "";
@@ -22,9 +20,6 @@ public class UnityAds : MonoBehaviour
     public delegate void VideoFinished();
     public VideoFinished plasticDelegate;
     ShowOptions optUnitAds;
-
-
-    
 
     //public int howOften = 20;
     public GameObject gdprConsentScreen;
@@ -35,11 +30,7 @@ public class UnityAds : MonoBehaviour
     InterstitialAd adsIntersitialStartapp;
     InterstitialAd adsRewaredStartapp;
 
-    //applovin
-    //public string applovinValueKey;
-
-
-
+    
     //privacy
     public string privacyRef;
 
@@ -51,11 +42,7 @@ public class UnityAds : MonoBehaviour
     private void Awake()
     {
 
-
         optUnitAds = new ShowOptions { resultCallback = ListenerRewaredUnity };
-
-        //Invoke("InvokeRateUsAction", 40);
-
 
         isShowedGdprPanelInt = PlayerPrefs.GetInt("isShowedGdprPanelInt", 0);
         systemLanguage = Application.systemLanguage;        
@@ -81,9 +68,7 @@ public class UnityAds : MonoBehaviour
             TapConsent(true);
         }
             
-
-        //Ader else
-        //LoopUnity();
+        
     }
 
     public void UserAgreeGdpr()
@@ -118,12 +103,7 @@ public class UnityAds : MonoBehaviour
         Application.OpenURL(rateUsRef);
     }
 
-    public void AwakeExtra()
-    {
-
-    }
-
-
+   
     public void TapConsent(bool consentResultUser)
     {
         toPrmReqst = 0;
@@ -161,12 +141,9 @@ public class UnityAds : MonoBehaviour
         AdSdk.Instance.SetUserConsent("pas", consentResultUser,
         (long)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalMilliseconds);
 
-
-
-
         
-
     }
+
     IEnumerator RequestForAds()
     {
         
@@ -192,15 +169,10 @@ public class UnityAds : MonoBehaviour
 
     }
 
-
-
-
     public void LoopUnity()
     {
         InvokeRepeating("VideoSendOut", 15, 15);
     }
-
-
 
     
 
@@ -208,8 +180,7 @@ public class UnityAds : MonoBehaviour
     {
         CancelInvoke();
     }
-
-
+    
 
     //video
     public void VideoSendOut()
@@ -231,13 +202,7 @@ public class UnityAds : MonoBehaviour
             if (startappIntersitialState)
                 adsIntersitialStartapp.ShowAd();
 
-        }
-
-
-
-
-        
-
+        }        
 
     }
 
@@ -262,34 +227,12 @@ public class UnityAds : MonoBehaviour
 
         }
 
-
-
-
-
-        
-
-
     }
-
-
-
 
     public void PrivacyTransitionGo()
     {
         Application.OpenURL(privacyRef);
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     void ListenerRewaredUnity(ShowResult result)
@@ -306,10 +249,5 @@ public class UnityAds : MonoBehaviour
                 break;
         }
     }
-
-
-   
-
-
 
 }

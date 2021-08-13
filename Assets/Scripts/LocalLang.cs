@@ -12,9 +12,6 @@ public class LocalLang : MonoBehaviour
     public string RUS;
     public string ENG;
 
-    //public bool updateLang = false;
-
-
     private void Start()
     {
         systemLanguage = Application.systemLanguage;
@@ -28,23 +25,5 @@ public class LocalLang : MonoBehaviour
         text.text = langStrok;
 
     }
-
-   /* private void Update()
-    {
-        if (updateLang)
-        {
-            langStrok = RUS;
-            text.text = langStrok;
-        }
-        else
-        {
-            langStrok = ENG;
-            text.text = langStrok;
-        }
-    }*/
-
-
-
-
-
+    
 }

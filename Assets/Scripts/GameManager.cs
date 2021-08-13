@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Добавить поздравления при выполнении ачивок
 public class GameManager : MonoBehaviour
 {
-
     public static string PLAYER_PREFS_INDEX_AVATAR = "INDEX_AVATAR";
     public static string PLAYER_PREFS_KEY_NAME_BRAWLER = "NAME_BRAWLER";
     public static string PLAYER_PREFS_LOGIN_PLAYER = "LOGIN_PLAYER";
@@ -16,13 +16,10 @@ public class GameManager : MonoBehaviour
     public static string PLAYER_PREFS_KEY_CHEST_TYPE = "chestType";
     public static string PLAYER_PREFS_KEY_CHEST_HOWMUCHOPENING = "chestHowMuch";
 
-
     public Image avatarUiIcon;
     public string[] containerNamesBrawlersInString;
     public Sprite[] conteinerSpritesBrawlersAll;
     public Sprite[] conteinerSpritesAvatarsBrawlersAll;
-
-
 
     public GameObject firstInputFieldSection;
     public Text textNamePlayerMainScreen;
@@ -40,6 +37,7 @@ public class GameManager : MonoBehaviour
 
         SetNameInputField();
         SetAvatar();
+
     }
 
     void SetNameInputField()
@@ -52,24 +50,8 @@ public class GameManager : MonoBehaviour
     {
         int indexAvatarCurrent = PlayerPrefs.GetInt(PLAYER_PREFS_INDEX_AVATAR, 0);
         avatarUiIcon.sprite = conteinerSpritesAvatarsBrawlersAll[indexAvatarCurrent];
-    }
-
-
-    private void Start()
-    {
-        
-    }
-
-    
-
-
+    }        
 }
-
-
-
-
-
-
 
 public enum Brawlers
 {
@@ -82,11 +64,7 @@ public enum Brawlers
     Bo,
     Dynomike,
     Jessie,
-
-
 }
-
-
 public enum WhatIsResourcesGet
 {
     nothing,
@@ -94,24 +72,18 @@ public enum WhatIsResourcesGet
     gems,
     tickets
 }
-
-
 public enum ResourcesButton
 {
     coin,
     gem,
     ticket
 }
-
-
 public enum TargetPickupedResourcesEnum
 {
     toPickupGem,
     toPickupCoin,
     toPickupTicket
 }
-
-
 public enum TypeBrawler
 {
     allBrawler,
