@@ -23,11 +23,7 @@ public class DropScreenAll : MonoBehaviour
         counterExit2 = 0;
     }
 
-    private void OnEnable()
-    {
-        
-    }
-
+   
     private void Start()
     {
         unityAds = GameObject.FindObjectOfType<UnityAds>();
@@ -36,6 +32,8 @@ public class DropScreenAll : MonoBehaviour
 
     private void OnDisable()
     {
+        int valueToRateUsShowing = 10;
+
         counterExit++;
         if (counterExit == valueSkip)
         {
@@ -46,11 +44,8 @@ public class DropScreenAll : MonoBehaviour
 
 
         counterExit2++;
-        if (counterExit2 % 10 == 0)
+        if (counterExit2 % valueToRateUsShowing == 0)
             unityAds.InvokeRateUsAction();
-
-
-
 
     }
 

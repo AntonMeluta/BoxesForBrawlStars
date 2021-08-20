@@ -26,7 +26,6 @@ public class DesktopPhoneControl : MonoBehaviour
         indexCurent = getIndex;
         PlayerPrefs.SetInt("phoneBack", indexCurent);
         image.sprite = allSpritesPhones[indexCurent];
-
     }
 
 

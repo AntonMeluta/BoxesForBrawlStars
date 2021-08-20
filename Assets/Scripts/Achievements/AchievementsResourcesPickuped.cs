@@ -5,45 +5,47 @@ using UnityEngine.UI;
 
 public class AchievementsResourcesPickuped : MonoBehaviour
 {
-
     public ResourcesConteiner resourcesConteiner;
     public TargetPickupedResourcesEnum targetPickupedResourcesEnum;
 
     public Slider slider;
     public Text textSlider;
-    int valueForSLider;
 
     int goToTarget;
     public int needCoutResources = 1000;
     public int rewaredCoin = 10000;
     public int rewaredGem = 1500;
 
+    public AchievementsGetControl achievementsGetControl;
+
+    string congratulationString;
+
     private void Awake()
     {
-        //slider = GetComponentInParent<Slider>();
+        LocalLang localLang = GetComponentInChildren<LocalLang>();
+
+        if (Application.systemLanguage == SystemLanguage.Russian)
+            congratulationString = "Достижение \"" + localLang.RUS + "\" получено";
+        else
+            congratulationString = "Achievement \"" + localLang.ENG + "\" received";
+
+        Events.achievmentsResProgressCheck += OnEnableWithDelay;
     }
 
     private void OnEnable()
     {
-        Invoke("EnableMain", 0.05f);
-
-
+        Invoke("OnEnableWithDelay", 0.05f);
     }
 
-    void EnableMain()
+    void OnEnableWithDelay()
     {
-        goToTarget = PlayerPrefs.GetInt("dsaw" + gameObject.name, 0);
-        print("gameObject.name = " + gameObject.name);
-        print("goToTarget = " + goToTarget);
+        goToTarget = PlayerPrefs.GetInt("sliderOpened" + gameObject.name, 0);
         if (goToTarget == 1)
         {
             slider.value = 100;
             textSlider.text = slider.value + "%";
             return;
         }
-
-
-
 
         switch (targetPickupedResourcesEnum)
         {
@@ -61,44 +63,39 @@ public class AchievementsResourcesPickuped : MonoBehaviour
         }
     }
 
-
-
     void CheckToProgressPickupGem()
     {
-        print("CheckToProgressPickupGem");
         if (needCoutResources <= resourcesConteiner.gems)
         {
             resourcesConteiner.AddGems(rewaredGem, WhatIsResourcesGet.coins, rewaredCoin);
-            PlayerPrefs.SetInt("dsaw" + gameObject.name, 1);
+            PlayerPrefs.SetInt("sliderOpened" + gameObject.name, 1);
             slider.value = 100;
             textSlider.text = slider.value + "%";
-            print("needCoutResources >= resourcesConteiner.gems");
+            Events.achievmentsResProgressCheck -= OnEnableWithDelay;
+            achievementsGetControl.AddLine(congratulationString);
             return;
         }
 
         int newValueSlider = 100 * resourcesConteiner.gems / needCoutResources;
-        print("newValueSlider = " + newValueSlider);
         slider.value = newValueSlider;
         textSlider.text = slider.value + "%";
-
-
     }
 
 
     void CheckToProgressPickupCoin()
     {
-        print("CheckToProgressPickupCoin");
         if (needCoutResources <= resourcesConteiner.coins)
         {
             resourcesConteiner.AddCoins(rewaredCoin, WhatIsResourcesGet.gems, rewaredGem);
-            PlayerPrefs.SetInt("dsaw" + gameObject.name, 1);
+            PlayerPrefs.SetInt("sliderOpened" + gameObject.name, 1);
             slider.value = 100;
             textSlider.text = slider.value + "%";
+            Events.achievmentsResProgressCheck -= OnEnableWithDelay;
+            achievementsGetControl.AddLine(congratulationString);
             return;
         }
 
         int newValueSlider = 100 * resourcesConteiner.coins / needCoutResources;
-        print("newValueSlider = " + newValueSlider);
         slider.value = newValueSlider;
         textSlider.text = slider.value + "%";
     }
@@ -106,18 +103,18 @@ public class AchievementsResourcesPickuped : MonoBehaviour
 
     void CheckToProgressPickupTicket()
     {
-        print("CheckToProgressPickupTicket");
         if (needCoutResources <= resourcesConteiner.tickets)
         {
             resourcesConteiner.AddTickets(rewaredCoin, WhatIsResourcesGet.gems, rewaredGem);
-            PlayerPrefs.SetInt("dsaw" + gameObject.name, 1);
+            PlayerPrefs.SetInt("sliderOpened" + gameObject.name, 1);
             slider.value = 100;
             textSlider.text = slider.value + "%";
+            Events.achievmentsResProgressCheck -= OnEnableWithDelay;
+            achievementsGetControl.AddLine(congratulationString);
             return;
         }
 
         int newValueSlider = 100 * resourcesConteiner.tickets / needCoutResources;
-        print("newValueSlider = " + newValueSlider);
         slider.value = newValueSlider;
         textSlider.text = slider.value + "%";
     }

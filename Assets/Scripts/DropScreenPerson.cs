@@ -11,7 +11,7 @@ public class DropScreenPerson : MonoBehaviour
 
     private void OnEnable()
     {
-        if (boxesContainer.isPersonDouble)
+        if (boxesContainer.IsPersonDouble)
         {
             nextScreen.SetActive(true);
             gameObject.SetActive(false);

@@ -18,11 +18,9 @@ public class ButtonResource : MonoBehaviour
 
     public bool isAdsButton = false;
 
-
     private void Awake()
     {
-        button = GetComponent<Button>();
-        
+        button = GetComponent<Button>();        
 
         switch (resourcesButton)
         {
@@ -38,7 +36,6 @@ public class ButtonResource : MonoBehaviour
             default:
                 break;
         }
-
     }
     private void Start()
     {
@@ -46,8 +43,6 @@ public class ButtonResource : MonoBehaviour
         unityAds = GameObject.FindObjectOfType<UnityAds>();
         audioController = GameObject.FindObjectOfType<AudioController>();
     }
-
-
 
     public void ActionButtonCoin ()
     {
@@ -80,9 +75,6 @@ public class ButtonResource : MonoBehaviour
         resourcesConteiner.AddTickets(currentDelta, currentWhatIsResourcesGet, currentDeltaNewResource);
         
     }
-
-
-
 
     public void AdsCoinGet()
     {

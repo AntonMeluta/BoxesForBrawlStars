@@ -4,45 +4,52 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-
+//NeedFix! убрать магические числа
 public class AchievementsBrawlersOpened : MonoBehaviour
 {
     public BoxesContainer boxesContainer;
-    public GameManager gameManager;
+    public PlayerAttributes playerAttributes;
     public ResourcesConteiner resourcesConteiner;
     public TypeBrawler typeBrawler;
 
     public Slider slider;
     public Text textSlider;
-    int valueForSLider;
 
     int goToTarget;
     public int rewaredCoin = 10000;
     public int rewaredGem = 1500;
 
-   
+    public AchievementsGetControl achievementsGetControl;
+
+    string congratulationString;
+
+    private void Awake()
+    {
+        LocalLang localLang = GetComponentInChildren<LocalLang>();
+
+        if (Application.systemLanguage == SystemLanguage.Russian)
+            congratulationString = "Достижение \"" + localLang.RUS + "\" получено";
+        else
+            congratulationString = "Achievement \"" + localLang.ENG + "\" received";
+
+        Events.achievmentsBrawlersProgressCheck += OnEnableWithDelay;
+    }
 
     private void OnEnable()
     {
-        Invoke("EnableMain", 0.05f);
-
-
+        Invoke("OnEnableWithDelay", 0.05f);
     }
 
-    void EnableMain()
+    void OnEnableWithDelay()
     {
-        goToTarget = PlayerPrefs.GetInt("dsaw" + gameObject.name, 0);
-        print("gameObject.name = " + gameObject.name);
-        print("goToTarget = " + goToTarget);
+        goToTarget = PlayerPrefs.GetInt("sliderOpened" + gameObject.name, 0);
+
         if (goToTarget == 1)
         {
             slider.value = 100;
             textSlider.text = slider.value + "%";
             return;
         }
-
-
-
 
         switch (typeBrawler)
         {
@@ -77,25 +84,28 @@ public class AchievementsBrawlersOpened : MonoBehaviour
     {
         int incrementALlBrawlers = 0;
         int interimGetValue = 0;
-        for (int i = 1; i < gameManager.containerNamesBrawlersInString.Length; i++)
+
+        for (int i = 1; i < playerAttributes.containerNamesBrawlersInString.Length; i++)
         {
             interimGetValue = 
-                PlayerPrefs.GetInt(GameManager.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
+                PlayerPrefs.GetInt(PlayerAttributes.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
             if (interimGetValue == 1)
                 incrementALlBrawlers++;
         }
 
 
-        if (incrementALlBrawlers >= gameManager.containerNamesBrawlersInString.Length - 1)
+        if (incrementALlBrawlers >= playerAttributes.containerNamesBrawlersInString.Length - 1)
         {
-            PlayerPrefs.SetInt("dsaw" + gameObject.name, 1);
+            PlayerPrefs.SetInt("sliderOpened" + gameObject.name, 1);
             slider.value = 100;
             textSlider.text = slider.value + "%";
+            Events.achievmentsBrawlersProgressCheck -= OnEnableWithDelay;
+            achievementsGetControl.AddLine(congratulationString);
             resourcesConteiner.AddGems(rewaredGem, WhatIsResourcesGet.coins, rewaredCoin);
         }
         else
         {
-            int newValueSlider = 100 * incrementALlBrawlers / (gameManager.containerNamesBrawlersInString.Length - 1);
+            int newValueSlider = 100 * incrementALlBrawlers / (playerAttributes.containerNamesBrawlersInString.Length - 1);
             print("newValueSlider = " + newValueSlider);
             slider.value = newValueSlider;
             textSlider.text = slider.value + "%";
@@ -106,28 +116,32 @@ public class AchievementsBrawlersOpened : MonoBehaviour
     //STANDART
     void CheckAllStandartBrawlers()
     {
+        int indexStandartBorderHighIndex = 12;
+
         int incrementALlBrawlers = 0;
         int interimGetValue = 0;
-        for (int i = 1; i < 12; i++)
+
+        for (int i = 1; i < indexStandartBorderHighIndex; i++)
         {
             interimGetValue =
-                PlayerPrefs.GetInt(GameManager.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
+                PlayerPrefs.GetInt(PlayerAttributes.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
             if (interimGetValue == 1)
                 incrementALlBrawlers++;
         }
 
 
-        if (incrementALlBrawlers >= 11)
+        if (incrementALlBrawlers >= indexStandartBorderHighIndex - 1)
         {
-            PlayerPrefs.SetInt("dsaw" + gameObject.name, 1);
+            PlayerPrefs.SetInt("sliderOpened" + gameObject.name, 1);
             slider.value = 100;
             textSlider.text = slider.value + "%";
+            Events.achievmentsBrawlersProgressCheck -= OnEnableWithDelay;
+            achievementsGetControl.AddLine(congratulationString);
             resourcesConteiner.AddGems(rewaredGem, WhatIsResourcesGet.coins, rewaredCoin);
         }
         else
         {
-            int newValueSlider = 100 * incrementALlBrawlers / 11;
-            print("newValueSlider = " + newValueSlider);
+            int newValueSlider = 100 * incrementALlBrawlers / (indexStandartBorderHighIndex - 1);
             slider.value = newValueSlider;
             textSlider.text = slider.value + "%";
         }
@@ -138,65 +152,73 @@ public class AchievementsBrawlersOpened : MonoBehaviour
     //RARE
     void CheckAllRareBrawlers()
     {
+        int indexRaretBorderLowIndex = 12;
+        int indexRareBorderHighIndex = 16;
+        int indexDifference = indexRareBorderHighIndex - indexRaretBorderLowIndex;
+
         int incrementALlBrawlers = 0;
         int interimGetValue = 0;
-        for (int i = 12; i < 16; i++)
+
+        for (int i = indexRaretBorderLowIndex; i < indexRareBorderHighIndex; i++)
         {
             interimGetValue =
-                PlayerPrefs.GetInt(GameManager.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
+                PlayerPrefs.GetInt(PlayerAttributes.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
             if (interimGetValue == 1)
                 incrementALlBrawlers++;
         }
 
 
-        if (incrementALlBrawlers >= 4)
+        if (incrementALlBrawlers >= indexDifference)
         {
-            PlayerPrefs.SetInt("dsaw" + gameObject.name, 1);
+            PlayerPrefs.SetInt("sliderOpened" + gameObject.name, 1);
             slider.value = 100;
             textSlider.text = slider.value + "%";
+            Events.achievmentsBrawlersProgressCheck -= OnEnableWithDelay;
+            achievementsGetControl.AddLine(congratulationString);
             resourcesConteiner.AddGems(rewaredGem, WhatIsResourcesGet.coins, rewaredCoin);
         }
         else
         {
-            int newValueSlider = 100 * incrementALlBrawlers / 4;
-            print("newValueSlider = " + newValueSlider);
+            int newValueSlider = 100 * incrementALlBrawlers / indexDifference;
             slider.value = newValueSlider;
             textSlider.text = slider.value + "%";
         }
 
     }
 
-
-
     //ULTRA_RARE
     void CheckAllUltraRareBrawlers()
     {
+        int indexUltraRaretBorderLowIndex = 16;
+        int indexUltraRareBorderHighIndex = 21;
+        int indexDifference = indexUltraRareBorderHighIndex - indexUltraRaretBorderLowIndex;
+
         int incrementALlBrawlers = 0;
         int interimGetValue = 0;
-        for (int i = 16; i < 21; i++)
+
+        for (int i = indexUltraRaretBorderLowIndex; i < indexUltraRareBorderHighIndex; i++)
         {
             interimGetValue =
-                PlayerPrefs.GetInt(GameManager.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
+                PlayerPrefs.GetInt(PlayerAttributes.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
             if (interimGetValue == 1)
                 incrementALlBrawlers++;
         }
 
-
-        if (incrementALlBrawlers >= 5)
+        if (incrementALlBrawlers >= indexDifference)
         {
-            PlayerPrefs.SetInt("dsaw" + gameObject.name, 1);
+            PlayerPrefs.SetInt("sliderOpened" + gameObject.name, 1);
             slider.value = 100;
             textSlider.text = slider.value + "%";
+            Events.achievmentsBrawlersProgressCheck -= OnEnableWithDelay;
+            achievementsGetControl.AddLine(congratulationString);
             resourcesConteiner.AddGems(rewaredGem, WhatIsResourcesGet.coins, rewaredCoin);
         }
         else
         {
-            int newValueSlider = 100 * incrementALlBrawlers / 5;
-            print("newValueSlider = " + newValueSlider);
+            int newValueSlider = 100 * incrementALlBrawlers / indexDifference;
             slider.value = newValueSlider;
             textSlider.text = slider.value + "%";
         }
-
     }
 
 
@@ -204,28 +226,33 @@ public class AchievementsBrawlersOpened : MonoBehaviour
     //EPIC
     void CheckAllEpicBrawlers()
     {
+        int indexEpicBorderLowIndex = 21;
+        int indexEpicBorderHighIndex = 27;
+        int indexDifference = indexEpicBorderHighIndex - indexEpicBorderLowIndex;
+
         int incrementALlBrawlers = 0;
         int interimGetValue = 0;
-        for (int i = 21; i < 27; i++)
+        
+        for (int i = indexEpicBorderLowIndex; i < indexEpicBorderHighIndex; i++)
         {
             interimGetValue =
-                PlayerPrefs.GetInt(GameManager.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
+                PlayerPrefs.GetInt(PlayerAttributes.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
             if (interimGetValue == 1)
                 incrementALlBrawlers++;
         }
 
-
-        if (incrementALlBrawlers >= 6)
+        if (incrementALlBrawlers >= indexDifference)
         {
-            PlayerPrefs.SetInt("dsaw" + gameObject.name, 1);
+            PlayerPrefs.SetInt("sliderOpened" + gameObject.name, 1);
             slider.value = 100;
             textSlider.text = slider.value + "%";
+            Events.achievmentsBrawlersProgressCheck -= OnEnableWithDelay;
+            achievementsGetControl.AddLine(congratulationString);
             resourcesConteiner.AddGems(rewaredGem, WhatIsResourcesGet.coins, rewaredCoin);
         }
         else
         {
-            int newValueSlider = 100 * incrementALlBrawlers / 6;
-            print("newValueSlider = " + newValueSlider);
+            int newValueSlider = 100 * incrementALlBrawlers / indexDifference;
             slider.value = newValueSlider;
             textSlider.text = slider.value + "%";
         }
@@ -236,66 +263,71 @@ public class AchievementsBrawlersOpened : MonoBehaviour
     //mythical
     void CheckAllMythicalBrawlers()
     {
+        int indexMythBorderLowIndex = 27;
+        int indexMythBorderHighIndex = 33;
+        int indexDifference = indexMythBorderHighIndex - indexMythBorderLowIndex;
+
         int incrementALlBrawlers = 0;
         int interimGetValue = 0;
-        for (int i = 27; i < 33; i++)
+
+        for (int i = indexMythBorderLowIndex; i < indexMythBorderHighIndex; i++)
         {
             interimGetValue =
-                PlayerPrefs.GetInt(GameManager.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
+                PlayerPrefs.GetInt(PlayerAttributes.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
             if (interimGetValue == 1)
                 incrementALlBrawlers++;
         }
 
-
-        if (incrementALlBrawlers >= 6)
+        if (incrementALlBrawlers >= indexDifference)
         {
-            PlayerPrefs.SetInt("dsaw" + gameObject.name, 1);
+            PlayerPrefs.SetInt("sliderOpened" + gameObject.name, 1);
             slider.value = 100;
             textSlider.text = slider.value + "%";
+            Events.achievmentsBrawlersProgressCheck -= OnEnableWithDelay;
+            achievementsGetControl.AddLine(congratulationString);
             resourcesConteiner.AddGems(rewaredGem, WhatIsResourcesGet.coins, rewaredCoin);
         }
         else
         {
-            int newValueSlider = 100 * incrementALlBrawlers / 6;
-            print("newValueSlider = " + newValueSlider);
+            int newValueSlider = 100 * incrementALlBrawlers / indexDifference;
             slider.value = newValueSlider;
             textSlider.text = slider.value + "%";
         }
-
     }
 
 
     //LEGEND
     void CheckAllLegendBrawlers()
     {
+        int indexLegendBorderLowIndex = 33;
+        int indexDifference = playerAttributes.
+            containerNamesBrawlersInString.Length - indexLegendBorderLowIndex;
+        
         int incrementALlBrawlers = 0;
         int interimGetValue = 0;
-        for (int i = 33; i < gameManager.containerNamesBrawlersInString.Length; i++)
+
+        for (int i = indexLegendBorderLowIndex; i < playerAttributes.containerNamesBrawlersInString.Length; i++)
         {
             interimGetValue =
-                PlayerPrefs.GetInt(GameManager.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
+                PlayerPrefs.GetInt(PlayerAttributes.PLAYER_PREFS_KEY_NAME_BRAWLER + i, 0);
             if (interimGetValue == 1)
                 incrementALlBrawlers++;
         }
 
-
-        if (incrementALlBrawlers >= 6)
+        if (incrementALlBrawlers >= indexDifference)
         {
-            PlayerPrefs.SetInt("dsaw" + gameObject.name, 1);
+            PlayerPrefs.SetInt("sliderOpened" + gameObject.name, 1);
             slider.value = 100;
             textSlider.text = slider.value + "%";
+            Events.achievmentsBrawlersProgressCheck -= OnEnableWithDelay;
+            achievementsGetControl.AddLine(congratulationString);
             resourcesConteiner.AddGems(rewaredGem, WhatIsResourcesGet.coins, rewaredCoin);
         }
         else
         {
-            int newValueSlider = 100 * incrementALlBrawlers / 6;
-            print("newValueSlider = " + newValueSlider);
+            int newValueSlider = 100 * incrementALlBrawlers / indexDifference;
             slider.value = newValueSlider;
             textSlider.text = slider.value + "%";
         }
-
     }
-
-
-
 }

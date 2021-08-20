@@ -7,6 +7,7 @@ using UnityEngine.Networking;
 using SimpleJSON;
 using UnityEngine.Advertisements;
 
+//NeedFix, перенести логику рейт ас в гейм менеджер или другой скрипт
 public class UnityAds : MonoBehaviour{
 
     //rateUs

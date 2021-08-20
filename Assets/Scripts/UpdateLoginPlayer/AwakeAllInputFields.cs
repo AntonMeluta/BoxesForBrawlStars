@@ -11,29 +11,23 @@ public class AwakeAllInputFields : MonoBehaviour
 
     private void Awake()
     {
-        inputField = GetComponent<InputField>();
-        
+        inputField = GetComponent<InputField>();        
     }
 
     private void OnEnable()
     {
         awakeStringText =
-                PlayerPrefs.GetString(GameManager.PLAYER_PREFS_LOGIN_PLAYER, "PLAYER");
+                PlayerPrefs.GetString(PlayerAttributes.PLAYER_PREFS_LOGIN_PLAYER, "PLAYER");
         if (awakeStringText != "PLAYER")
             inputField.text = awakeStringText;
     }
 
     public void SaveUpdateLogin()
     {
-        PlayerPrefs.SetString(GameManager.PLAYER_PREFS_LOGIN_PLAYER, inputField.text);
+        PlayerPrefs.SetString(PlayerAttributes.PLAYER_PREFS_LOGIN_PLAYER, inputField.text);
         textLoginInUi.text = inputField.text;
 
     }
-
-
-
-
-
 
 
 }

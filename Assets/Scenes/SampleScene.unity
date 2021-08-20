@@ -294,7 +294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 58042471}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 27
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &7748585
@@ -2488,8 +2488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 10
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1781670105}
@@ -2632,6 +2631,100 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94027146}
+  m_CullTransparentMesh: 0
+--- !u!1 &101089446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 101089447}
+  - component: {fileID: 101089450}
+  - component: {fileID: 101089449}
+  - component: {fileID: 101089448}
+  m_Layer: 5
+  m_Name: TextAchievments
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &101089447
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101089446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1713036272}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.7, y: 68.1}
+  m_SizeDelta: {x: 806.9, y: 243.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &101089448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101089446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb6580d6f8169546903c8a2e216f20c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RUS: "\u041E\u0446\u0435\u043D\u0438\u0442\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435"
+  ENG: Rate us app
+--- !u!114 &101089449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101089446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 6057d5794d4d1a94299b83a9301413dd, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 6
+    m_MaxSize: 86
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u0432\u0430\u044B\u0432\u0430\u0432\u0430"
+--- !u!222 &101089450
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101089446}
   m_CullTransparentMesh: 0
 --- !u!1 &102506534
 GameObject:
@@ -2834,8 +2927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 5
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 265603607}
@@ -3364,7 +3456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1610816835}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 36
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &113541020
@@ -3811,6 +3903,9 @@ MonoBehaviour:
   nameHeaderBrawlerText: {fileID: 1104131851}
   infoBrawlerFieldText: {fileID: 1279347553}
   imageBrawlerFull: {fileID: 414882602}
+  sliderAttackValue: {fileID: 1777705155265913096}
+  sliderHealthValue: {fileID: 1777705155265913095}
+  sliderSuperValue: {fileID: 1777705155265913094}
 --- !u!114 &130423383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4459,13 +4554,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxesContainer: {fileID: 1306513821}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
   typeBrawler: 6
   slider: {fileID: 755248349}
   textSlider: {fileID: 888741989}
   rewaredCoin: 15000
   rewaredGem: 7000
+  achievementsGetControl: {fileID: 1713036273}
 --- !u!114 &159418801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5050,6 +5146,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToHuntBoxesState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &174963059
@@ -5107,7 +5214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 85097417}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 1
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &174963062
@@ -6027,8 +6134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 22
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1111940102}
@@ -6505,7 +6611,7 @@ RectTransform:
   - {fileID: 490702804}
   - {fileID: 739847624}
   m_Father: {fileID: 2004634534}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6581,7 +6687,6 @@ MonoBehaviour:
   rateUsObj: {fileID: 221304532}
   rateUsRef: https://play.google.com/store/apps/developer?id=Human+adventure+game
   gdprConsentScreen: {fileID: 982100079}
-  applovinValueKey: 
   privacyRef: https://sites.google.com/view/human-neighborflat
 --- !u!4 &222294811
 Transform:
@@ -6590,12 +6695,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222294809}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1312280117}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &223530217
 GameObject:
@@ -6709,6 +6814,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToHomeScreenState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &223530220
@@ -6801,8 +6917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 20
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 649388742}
@@ -7508,8 +7623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 7
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1866732074}
@@ -8319,8 +8433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 16
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 506819021}
@@ -8906,6 +9019,7 @@ MonoBehaviour:
   needCoutResources: 8000
   rewaredCoin: 15000
   rewaredGem: 500
+  achievementsGetControl: {fileID: 1713036273}
 --- !u!1 &266345327
 GameObject:
   m_ObjectHideFlags: 0
@@ -9046,6 +9160,7 @@ MonoBehaviour:
   textSlider: {fileID: 1883920463}
   rewaredCoin: 20000
   rewaredGem: 10000
+  achievementsGetControl: {fileID: 1713036273}
 --- !u!114 &266788121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9410,8 +9525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 24
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 113453361}
@@ -10536,8 +10650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 2
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 598651111}
@@ -11934,8 +12047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 35
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1075169255}
@@ -12121,8 +12233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 6
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1255486120}
@@ -12291,8 +12402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 28
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 126443694}
@@ -12754,8 +12864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 38
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1559723426}
@@ -13856,9 +13965,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9386c5466dde524a829d77fce8ab8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getAttackValue: 0
-  getHealthValue: 0
-  getSuperValue: 0
 --- !u!114 &394249479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14583,7 +14689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 2041196766}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 11
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &412720827
@@ -14916,7 +15022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 780823488}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 29
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &425501826
@@ -15932,6 +16038,9 @@ MonoBehaviour:
   nameHeaderBrawlerText: {fileID: 476923766}
   infoBrawlerFieldText: {fileID: 33841103}
   imageBrawlerFull: {fileID: 0}
+  sliderAttackValue: {fileID: 0}
+  sliderHealthValue: {fileID: 0}
+  sliderSuperValue: {fileID: 0}
 --- !u!114 &472356747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16962,7 +17071,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 575319360}
   m_Direction: 2
   m_Value: 0.9999999
-  m_Size: 0.40837413
+  m_Size: 0.40837407
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -17507,8 +17616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 27
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 12378425}
@@ -18115,13 +18223,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxesContainer: {fileID: 1306513821}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
   typeBrawler: 1
   slider: {fileID: 1059508190}
   textSlider: {fileID: 1139529285}
   rewaredCoin: 3000
   rewaredGem: 500
+  achievementsGetControl: {fileID: 1713036273}
 --- !u!114 &537781175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19888,13 +19997,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxesContainer: {fileID: 1306513821}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
   typeBrawler: 3
   slider: {fileID: 1987088684}
   textSlider: {fileID: 284459673}
   rewaredCoin: 7000
   rewaredGem: 1000
+  achievementsGetControl: {fileID: 1713036273}
 --- !u!114 &584321449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20108,13 +20218,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxesContainer: {fileID: 1306513821}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
   typeBrawler: 0
   slider: {fileID: 137866026}
   textSlider: {fileID: 1198482865}
   rewaredCoin: 20000
   rewaredGem: 10000
+  achievementsGetControl: {fileID: 1713036273}
 --- !u!1 &588599120
 GameObject:
   m_ObjectHideFlags: 0
@@ -21254,7 +21365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1242546244}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 31
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &617816851
@@ -21587,7 +21698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 187315514}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 32
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &638003859
@@ -22264,6 +22375,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToHuntBoxesState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &675231103
@@ -22601,7 +22723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 844709599}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 35
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &686941797
@@ -22720,7 +22842,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1171728474}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.24383119
+  m_Size: 0.24383114
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -24725,7 +24847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 2017462456}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 28
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &771588863
@@ -24952,7 +25074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 57772544}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 30
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &777162465
@@ -25606,8 +25728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 18
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 610285606}
@@ -26238,7 +26359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1129580357}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 10
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &796522764
@@ -26933,7 +27054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &817280455
@@ -27006,8 +27127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 37
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 241947719}
@@ -28289,6 +28409,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToHomeScreenState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &871643288
@@ -28858,7 +28989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1107394967}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 21
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &892890434
@@ -29981,7 +30112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1531202830}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 37
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &916689984
@@ -30227,6 +30358,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToHomeScreenState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &918022188
@@ -30374,7 +30516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1184677563}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 15
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &918787241
@@ -30670,8 +30812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 14
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 499318630}
@@ -30909,6 +31050,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1118414173}
         m_MethodName: PlayMenuClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToLoginState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31480,7 +31632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 18378661}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 7
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &957413662
@@ -31520,6 +31672,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957413658}
   m_CullTransparentMesh: 0
+--- !u!1 &957668248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 957668249}
+  m_Layer: 0
+  m_Name: StorageFighters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &957668249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957668248}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &959272729
 GameObject:
   m_ObjectHideFlags: 0
@@ -31886,7 +32068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1345550452}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 4
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &960507766
@@ -32205,8 +32387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 23
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 376544164}
@@ -32448,8 +32629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 29
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 996913640}
@@ -33216,7 +33396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 522652644}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 19
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1011271993
@@ -33292,6 +33472,135 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1017010748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1017010749}
+  - component: {fileID: 1017010752}
+  - component: {fileID: 1017010751}
+  - component: {fileID: 1017010750}
+  m_Layer: 5
+  m_Name: CancelImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1017010749
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017010748}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children:
+  - {fileID: 1370660881}
+  m_Father: {fileID: 1713036272}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000013351, y: -125}
+  m_SizeDelta: {x: 481.2, y: 183}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1017010750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017010748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1017010751}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1713036273}
+        m_MethodName: SkipWindowCongratulations
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1017010751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017010748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: b7fae2ab2c1a7db468e1ea65fabf0bd9, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1017010752
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017010748}
+  m_CullTransparentMesh: 0
 --- !u!1 &1021347938
 GameObject:
   m_ObjectHideFlags: 0
@@ -34923,8 +35232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 9
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1643905519}
@@ -35832,7 +36140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 633219812}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 38
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1107366216
@@ -36332,12 +36640,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118414172}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1312280117}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1118414175
 AudioSource:
@@ -36681,6 +36989,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1118414173}
         m_MethodName: PlayMenuClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToAchievementState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37894,6 +38213,7 @@ MonoBehaviour:
   needCoutResources: 3000
   rewaredCoin: 1000
   rewaredGem: 5000
+  achievementsGetControl: {fileID: 1713036273}
 --- !u!114 &1152225859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40108,8 +40428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 4
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1756318259}
@@ -40279,8 +40598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 36
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1458667697}
@@ -41791,6 +42109,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToHomeScreenState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1255575868
@@ -41922,6 +42251,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1118414173}
         m_MethodName: PlayMenuClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToAvatarState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -42244,6 +42584,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1118414173}
         m_MethodName: PlayMenGoBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToHomeScreenState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -42578,6 +42929,7 @@ MonoBehaviour:
   textSlider: {fileID: 1829911478}
   rewaredCoin: 1000
   rewaredGem: 400
+  achievementsGetControl: {fileID: 1713036273}
 --- !u!114 &1274610910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42765,7 +43117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 2136941268}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 17
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1277600334
@@ -42954,12 +43306,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280626558}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1312280117}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1281273334
 GameObject:
@@ -43069,7 +43421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1993579976}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 5
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1281273338
@@ -43645,8 +43997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932802007a8f50d40b7b6b25ac194713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPersonDouble: 0
-  gameManager: {fileID: 1642539379}
+  allBrawlers: []
   dropScreenAll: {fileID: 1638283677}
   dropsScreenAll_Extra: {fileID: 817280455}
   imageBoxesUi: {fileID: 540878584}
@@ -43694,12 +44045,47 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306513820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+  m_Father: {fileID: 1312280117}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1312280116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1312280117}
+  m_Layer: 0
+  m_Name: Controllers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1312280117
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312280116}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1118414174}
+  - {fileID: 222294811}
+  - {fileID: 1306513822}
+  - {fileID: 1280626560}
+  - {fileID: 2138836252}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1314321530
 GameObject:
@@ -44184,8 +44570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 32
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 427326931}
@@ -44696,8 +45081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 31
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1775041373}
@@ -46016,6 +46400,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368055583}
   m_CullTransparentMesh: 0
+--- !u!1 &1370660880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1370660881}
+  - component: {fileID: 1370660884}
+  - component: {fileID: 1370660883}
+  - component: {fileID: 1370660882}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1370660881
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370660880}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 1017010749}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 6.800025, y: -0.79998016}
+  m_SizeDelta: {x: 204.9, y: 74.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1370660882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370660880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.14509805}
+  m_EffectDistance: {x: 2.59, y: 1.98}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1370660883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370660880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 6057d5794d4d1a94299b83a9301413dd, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 62
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: OK
+--- !u!222 &1370660884
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370660880}
+  m_CullTransparentMesh: 0
 --- !u!1 &1373705249
 GameObject:
   m_ObjectHideFlags: 0
@@ -46124,7 +46603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1166564618}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 13
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1373705253
@@ -46219,13 +46698,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxesContainer: {fileID: 1306513821}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
   typeBrawler: 4
   slider: {fileID: 1615166913}
   textSlider: {fileID: 1045436537}
   rewaredCoin: 10000
   rewaredGem: 2000
+  achievementsGetControl: {fileID: 1713036273}
 --- !u!114 &1376964247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47091,7 +47571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 237258018}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 8
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1427292761
@@ -47188,9 +47668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9386c5466dde524a829d77fce8ab8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getAttackValue: 0
-  getHealthValue: 0
-  getSuperValue: 0
 --- !u!114 &1427672312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47575,7 +48052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1225800013}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 25
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1430824146
@@ -47668,8 +48145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 34
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1864116884}
@@ -47861,6 +48337,7 @@ MonoBehaviour:
   needCoutResources: 1000
   rewaredCoin: 20000
   rewaredGem: 6000
+  achievementsGetControl: {fileID: 1713036273}
 --- !u!114 &1450420662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49322,6 +49799,7 @@ MonoBehaviour:
   textSlider: {fileID: 559548811}
   rewaredCoin: 8000
   rewaredGem: 3000
+  achievementsGetControl: {fileID: 1713036273}
 --- !u!114 &1508251676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49704,7 +50182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 734800617}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 3
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1513676387
@@ -50004,8 +50482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 19
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1997149192}
@@ -51755,7 +52232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 458788021}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 16
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1577219850
@@ -51953,18 +52430,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584065530}
   m_CullTransparentMesh: 0
---- !u!114 &1585805478 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8810665908718939176, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1777705155265913093}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9386c5466dde524a829d77fce8ab8d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1588968566
 GameObject:
   m_ObjectHideFlags: 0
@@ -52756,7 +53221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 440437822}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 20
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1623436422
@@ -53035,8 +53500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 21
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1506655531}
@@ -53163,49 +53627,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640031996}
   m_CullTransparentMesh: 0
---- !u!1 &1641033902
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1641033904}
-  - component: {fileID: 1641033903}
-  m_Layer: 0
-  m_Name: DropManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1641033903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641033902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a69e8b862210c64b9be400b944056a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1641033904
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641033902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1641714822
 GameObject:
   m_ObjectHideFlags: 0
@@ -53330,7 +53751,7 @@ GameObject:
   - component: {fileID: 1642539380}
   - component: {fileID: 1642539379}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: PlayerAttributes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53424,7 +53845,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ded7668539cf57743afee862b0969113, type: 3}
   - {fileID: 21300000, guid: 68f25f5e3b8f0d94eac4e11d80ba5435, type: 3}
   - {fileID: 21300000, guid: c1263a1b66b1e0645a3ecd4e9b7b0793, type: 3}
-  - {fileID: 21300000, guid: ac22f64291103ad45a1808e4fded90a7, type: 3}
+  - {fileID: 21300000, guid: a8acf66a0a796ea4987df9480d5a24ee, type: 3}
   - {fileID: 21300000, guid: c0c363e6f1622044fa6c0afe55d25131, type: 3}
   - {fileID: 21300000, guid: ea208b1ddc2ce594db7e870978169cde, type: 3}
   - {fileID: 21300000, guid: 624d31c4264d2f84fa9a1141f7fa5e0f, type: 3}
@@ -54436,6 +54857,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToHomeScreenState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1681474517
@@ -54657,7 +55089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 2008996820}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 33
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1693020734
@@ -54938,7 +55370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 392508610}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 0
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1707485059
@@ -55216,6 +55648,97 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708618430}
+  m_CullTransparentMesh: 0
+--- !u!1 &1713036271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1713036272}
+  - component: {fileID: 1713036275}
+  - component: {fileID: 1713036274}
+  - component: {fileID: 1713036273}
+  m_Layer: 5
+  m_Name: AchievemenGET_Screen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1713036272
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713036271}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.999999, y: 0.999999, z: 0.999999}
+  m_Children:
+  - {fileID: 101089447}
+  - {fileID: 1017010749}
+  m_Father: {fileID: 2004634534}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1713036273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713036271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82f7b13d5b6b1c48afbd76fa08a2879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textGreetingUI: {fileID: 101089449}
+  audioController: {fileID: 0}
+--- !u!114 &1713036274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713036271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: b04abc2eed6a6944dba29a864bb3f71b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1713036275
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713036271}
   m_CullTransparentMesh: 0
 --- !u!1 &1713094830
 GameObject:
@@ -55718,6 +56241,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToHomeScreenState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1728259049
@@ -55939,7 +56473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 168544104}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 12
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1733777048
@@ -56236,7 +56770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 150647910}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 6
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1750566045
@@ -56534,7 +57068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1034268697}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 14
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1756448837
@@ -56867,13 +57401,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxesContainer: {fileID: 1306513821}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
   typeBrawler: 5
   slider: {fileID: 1220215421}
   textSlider: {fileID: 780322861}
   rewaredCoin: 12000
   rewaredGem: 4000
+  achievementsGetControl: {fileID: 1713036273}
 --- !u!114 &1760425351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57758,8 +58293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 12
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 474582372}
@@ -58172,7 +58706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1.2021, y: -12.299988}
+  m_AnchoredPosition: {x: -1.2021, y: -12.300049}
   m_SizeDelta: {x: 327.40002, y: 124.20001}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1810482220
@@ -59101,8 +59635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 26
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1046628084}
@@ -59591,8 +60124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 11
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1905568015}
@@ -60354,6 +60886,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToBrawlCollectionState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1868719356
@@ -60704,8 +61247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 8
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 984716405}
@@ -61901,6 +62443,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToShopState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1918801948
@@ -62188,7 +62741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 675231103}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 18
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1929853880
@@ -62356,6 +62909,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToHuntBoxesState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1932098035
@@ -62486,6 +63050,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToHuntBoxesState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1934832507
@@ -62596,7 +63171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 510360598}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 22
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1934832511
@@ -62913,8 +63488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 13
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 2143311423}
@@ -63583,7 +64157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 884101632}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 23
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &1960278796
@@ -64042,8 +64616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 30
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 387576515}
@@ -65306,7 +65879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 2039132365}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 26
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &2003424128
@@ -65443,6 +66016,7 @@ RectTransform:
   - {fileID: 708387301}
   - {fileID: 122128992}
   - {fileID: 144835817}
+  - {fileID: 1713036272}
   - {fileID: 221304533}
   - {fileID: 982100080}
   m_Father: {fileID: 0}
@@ -65999,6 +66573,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2138836253}
+        m_MethodName: TransitionToHomeScreenState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2016537214
@@ -66220,7 +66805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1021715523}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 34
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &2021605256
@@ -66388,8 +66973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 15
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1223367122}
@@ -66827,8 +67411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 25
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1724018162}
@@ -67364,7 +67947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 2132403712}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 9
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &2068635538
@@ -67729,13 +68312,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxesContainer: {fileID: 1306513821}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
   typeBrawler: 2
   slider: {fileID: 469095212}
   textSlider: {fileID: 1950284738}
   rewaredCoin: 5000
   rewaredGem: 700
+  achievementsGetControl: {fileID: 1713036273}
 --- !u!114 &2082915423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68132,8 +68716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 1
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 128719396}
@@ -68512,7 +69095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1603372138}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 24
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &2104711489
@@ -68605,8 +69188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 3
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1430633584}
@@ -68782,7 +69364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1347495621}
-  gameManager: {fileID: 1642539379}
+  playerAttributes: {fileID: 1642539379}
   indexBrawlerAvatar: 2
   imageIconAvatarMajorScreen: {fileID: 1742350583}
 --- !u!114 &2109566170
@@ -68928,8 +69510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 17
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 672224701}
@@ -69602,8 +70183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderParametresBrawler: {fileID: 1585805478}
-  gameManager: {fileID: 1642539379}
+  brawlDefinition: {fileID: 0}
   indexBrawler: 33
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 245066607}
@@ -69969,6 +70549,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136941268}
   m_CullTransparentMesh: 0
+--- !u!1 &2138836251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2138836252}
+  - component: {fileID: 2138836253}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2138836252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138836251}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1312280117}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2138836253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138836251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0997ee94c41b1e42bdee2fd1a7c2154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
 --- !u!1 &2139229477
 GameObject:
   m_ObjectHideFlags: 0
@@ -70565,6 +71189,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e3948b1b71535d47a5fd42deeb2906d, type: 3}
+--- !u!114 &1777705155265913094 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1777705155831959910, guid: 2e3948b1b71535d47a5fd42deeb2906d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1777705155265913093}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1777705155265913095 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1777705155884396568, guid: 2e3948b1b71535d47a5fd42deeb2906d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1777705155265913093}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1777705155265913096 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1777705156029388278, guid: 2e3948b1b71535d47a5fd42deeb2906d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1777705155265913093}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1777705156379156360
 RectTransform:
   m_ObjectHideFlags: 0
@@ -70848,7 +71508,7 @@ PrefabInstance:
     - target: {fileID: 2013663089609521444, guid: 8c989fed5050e6a4eb1c0949f19ca76f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2013663089609521444, guid: 8c989fed5050e6a4eb1c0949f19ca76f,
         type: 3}
@@ -70954,7 +71614,7 @@ PrefabInstance:
     - target: {fileID: 2013663088904201567, guid: 8c989fed5050e6a4eb1c0949f19ca76f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000061035156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2013663089349235258, guid: 8c989fed5050e6a4eb1c0949f19ca76f,
         type: 3}
@@ -70980,6 +71640,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9386c5466dde524a829d77fce8ab8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getAttackValue: 0
-  getHealthValue: 0
-  getSuperValue: 0

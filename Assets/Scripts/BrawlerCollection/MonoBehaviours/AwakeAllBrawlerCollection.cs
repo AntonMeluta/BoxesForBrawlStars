@@ -5,19 +5,14 @@ using UnityEngine.UI;
 
 public class AwakeAllBrawlerCollection : MonoBehaviour
 {
-
-   
-
     Button button;
     Sprite fullBrawlerSprite;
-    public SliderParametresBrawler sliderParametresBrawler;
 
-    public GameManager gameManager;
+    public BrawlerStats_SO brawlDefinition;
     public int indexBrawler;
     string getName;
     public BrawlerInfo brawlerInfo;
     public GameObject lockSection;
-
 
     string infoBrawlers;
     SystemLanguage systemLanguage;
@@ -28,21 +23,24 @@ public class AwakeAllBrawlerCollection : MonoBehaviour
     public int valueHealth = 4;
     public int valueSuper = 2;
 
-
-
     private void Awake()
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(PressBrawlerButton);
-        getName = gameManager.containerNamesBrawlersInString[indexBrawler];
+
+        getName = brawlDefinition.nameBrawler;
 
         systemLanguage = Application.systemLanguage;
         if (systemLanguage == SystemLanguage.Russian)
-            infoBrawlers = RUS;
+            infoBrawlers = brawlDefinition.rusDescriptionBrawler;
         else
-            infoBrawlers = EN;
+            infoBrawlers = brawlDefinition.enDescriptionBrawler;
 
-        fullBrawlerSprite = gameManager.conteinerSpritesBrawlersAll[indexBrawler];
+        fullBrawlerSprite = brawlDefinition.imageBrawler;
+
+        valueAttack = brawlDefinition.valueAttack;
+        valueHealth = brawlDefinition.valueHealth;
+        valueSuper = brawlDefinition.valueSuper;
 
     }
 
@@ -50,7 +48,7 @@ public class AwakeAllBrawlerCollection : MonoBehaviour
     private void OnEnable()
     {
         int permissionINdex =
-            PlayerPrefs.GetInt(GameManager.PLAYER_PREFS_KEY_NAME_BRAWLER + indexBrawler, 0);
+            PlayerPrefs.GetInt(PlayerAttributes.PLAYER_PREFS_KEY_NAME_BRAWLER + indexBrawler, 0);
         if (permissionINdex == 0)
         {
             button.interactable = false;
@@ -61,16 +59,13 @@ public class AwakeAllBrawlerCollection : MonoBehaviour
             button.interactable = true;
             lockSection.SetActive(false);
         }
-
-
     }
-
 
     public void PressBrawlerButton()
     {
-        brawlerInfo.GetInfoAboutNeedBrawler(getName, infoBrawlers, fullBrawlerSprite);
+        brawlerInfo.GetInfoAboutNeedBrawler(getName, infoBrawlers, fullBrawlerSprite,
+            valueAttack, valueHealth, valueSuper);
         brawlerInfo.gameObject.SetActive(true);
-        sliderParametresBrawler.GetValues(valueAttack, valueHealth, valueSuper);
 
     }
 
