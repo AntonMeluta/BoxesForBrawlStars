@@ -3,32 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AchievementsChestsOpened : MonoBehaviour
+public class AchievementsChestsOpened : AchievementsInfo
 {
-    int goToTarget;
-    public ResourcesConteiner resourcesConteiner;
     public int indexChestStatus = 0;
     public int needCountOpeningAction = 100;
-    public Slider slider;
-    public Text textSlider;
 
-    public int rewaredCoin = 10000;
-    public int rewaredGem = 300;
-
-    public AchievementsGetControl achievementsGetControl;
-
-    string congratulationString;
-
-    private void Awake()
+    protected override void Awake()
     {
-        LocalLang localLang = GetComponentInChildren<LocalLang>();
-
-        if (Application.systemLanguage == SystemLanguage.Russian)
-            congratulationString = "Достижение \"" + localLang.RUS + "\" получено";
-        else
-            congratulationString = "Achievement \"" + localLang.ENG + "\" received";
-
-        Events.achievmentsChestProgressCheck += OnEnableWithDelay;
+        base.Awake();
+        Events.achievmentsChestProgressCheck += OnEnableWithDelay;        
     }
 
     private void OnEnable()
@@ -57,12 +40,12 @@ public class AchievementsChestsOpened : MonoBehaviour
 
         if (howMuchOpened >= needCountOpeningAction)
         {
-            slider.value = 100;
-            textSlider.text = slider.value + "%";
-            PlayerPrefs.SetInt(PlayerAttributes.PLAYER_PREFS_KEY_CHEST_TYPE + indexChestStatus, 1);
-            resourcesConteiner.AddGems(rewaredGem, WhatIsResourcesGet.coins, rewaredCoin);
             Events.achievmentsChestProgressCheck -= OnEnableWithDelay;
+            PlayerPrefs.SetInt(PlayerAttributes.PLAYER_PREFS_KEY_CHEST_TYPE + indexChestStatus, 1);
+            slider.value = 100;
+            textSlider.text = slider.value + "%";                                
             achievementsGetControl.AddLine(congratulationString);
+            resourcesConteiner.AddGems(rewaredGem, WhatIsResourcesGet.coins, rewaredCoin);
         }
         else
         {

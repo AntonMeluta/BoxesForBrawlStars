@@ -42,6 +42,7 @@ public class ResourcesConteiner : MonoBehaviour
         foreach (var item in coinsUi)
             item.text = coins.ToString();
         audioController.PlayGetCoins();
+        Events.CallAchivmentsResProgressCheck();
     }
 
     public void AddCoins(int deltaCoins, WhatIsResourcesGet whatIsResourcesGet, int deltaNewResource)
@@ -49,7 +50,7 @@ public class ResourcesConteiner : MonoBehaviour
         int newValue = coins + deltaCoins;
         if (newValue < 0)
         {
-            //NeedFix можно сделать Toast как в АС 
+            //NeedFixToast.. АС 
             return;
         }
 
@@ -83,6 +84,7 @@ public class ResourcesConteiner : MonoBehaviour
         foreach (var item in gemsUi)
             item.text = gems.ToString();
         audioController.PlayBuyGems();
+        Events.CallAchivmentsResProgressCheck();
     }
 
     public void AddGems(int deltaGems, WhatIsResourcesGet whatIsResourcesGet, int deltaNewResource)
@@ -90,7 +92,7 @@ public class ResourcesConteiner : MonoBehaviour
         int newValue = gems + deltaGems;
         if (newValue < 0)
         {
-            //NeedFix можно сделать Toast как в АС, интерфейсы
+            //NeedFix Toast АС
             return;
         }
 
@@ -115,7 +117,6 @@ public class ResourcesConteiner : MonoBehaviour
         }
     }
 
-
     public void AddTickets(int deltaTickets)
     {
         int newValue = tickets + deltaTickets;
@@ -124,6 +125,7 @@ public class ResourcesConteiner : MonoBehaviour
         foreach (var item in ticketsUi)
             item.text = tickets.ToString();
         audioController.PlayGetTickets();
+        Events.CallAchivmentsResProgressCheck();
     }
 
     public void AddTickets(int deltaTickets, WhatIsResourcesGet whatIsResourcesGet, int deltaNewResource)
@@ -131,7 +133,7 @@ public class ResourcesConteiner : MonoBehaviour
         int newValue = tickets + deltaTickets;
         if (newValue < 0)
         {
-            //NeedFix можно сделать Toast как в АС 
+            //NeedFix...TOAST
             return;
         }
 

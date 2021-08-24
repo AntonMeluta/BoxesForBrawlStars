@@ -14,5 +14,4 @@ public class BrawlerStats_SO : ScriptableObject
     public int valueAttack;
     public int valueHealth;
     public int valueSuper;
-
 }

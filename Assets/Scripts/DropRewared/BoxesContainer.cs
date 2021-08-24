@@ -17,8 +17,7 @@ public class BoxesContainer : MonoBehaviour
     }     
 
     int savedIndexBox;
-    //public PlayerAttributes playerAttributes;
-    public List<BrawlerStats_SO> allBrawlers;
+    public StorageFighters storageFighters;
     public DropScreenAll dropScreenAll;
     public DropScreenAll dropsScreenAll_Extra;
     public Image imageBoxesUi;
@@ -79,7 +78,6 @@ public class BoxesContainer : MonoBehaviour
             howMuchOpened0++;
             PlayerPrefs.SetInt
                 (PlayerAttributes.PLAYER_PREFS_KEY_CHEST_HOWMUCHOPENING + savedIndexBox, howMuchOpened0);
-            //NeedFix acheivments check...
             Events.CallAchivmentsChestProgressCheck();
             return;
         }        
@@ -131,7 +129,6 @@ public class BoxesContainer : MonoBehaviour
 
     public void Open2Chest()
     {
-        //Events.CallAchivmentsChestProgressCheck();
         BoxesContainerGameObject.SetActive(true);
     }
 
@@ -143,7 +140,6 @@ public class BoxesContainer : MonoBehaviour
         {
             revaredRes = Random.Range
                 (lowBorderCoinAll * (savedIndexBox + 1), highBorderCoinAll * (savedIndexBox + 1));
-            print("revaredRes = " + revaredRes);
             resourcesConteiner.AddCoins(revaredRes);
             textObjCoinUi.SetActive(true);
             textObjGemUi.SetActive(false);
@@ -195,9 +191,10 @@ public class BoxesContainer : MonoBehaviour
                 {
                     isPersonDouble = false;
                     brawlerDropImageRewared.gameObject.SetActive(true);
-                    brawlerDropImageRewared.sprite = allBrawlers[randIndexBrawl].imageBrawler;
-                    brawlerNameDropTextRewared.text = allBrawlers[randIndexBrawl].nameBrawler;
+                    brawlerDropImageRewared.sprite = storageFighters.collectionBrawlers[randIndexBrawl].imageBrawler;
+                    brawlerNameDropTextRewared.text = storageFighters.collectionBrawlers[randIndexBrawl].nameBrawler;
                     PlayerPrefs.SetInt(PlayerAttributes.PLAYER_PREFS_KEY_NAME_BRAWLER + randIndexBrawl, 1);
+                    Events.CallAchivmentsBrawlersProgressCheck();
                 }              
                 else
                 {
@@ -215,9 +212,10 @@ public class BoxesContainer : MonoBehaviour
                 {
                     isPersonDouble = false;
                     brawlerDropImageRewared.gameObject.SetActive(true);
-                    brawlerDropImageRewared.sprite = allBrawlers[randIndexBrawl].imageBrawler;
-                    brawlerNameDropTextRewared.text = allBrawlers[randIndexBrawl].nameBrawler;
+                    brawlerDropImageRewared.sprite = storageFighters.collectionBrawlers[randIndexBrawl].imageBrawler;
+                    brawlerNameDropTextRewared.text = storageFighters.collectionBrawlers[randIndexBrawl].nameBrawler;
                     PlayerPrefs.SetInt(PlayerAttributes.PLAYER_PREFS_KEY_NAME_BRAWLER + randIndexBrawl, 1);
+                    Events.CallAchivmentsBrawlersProgressCheck();
                 }
                 else
                 {
@@ -235,9 +233,10 @@ public class BoxesContainer : MonoBehaviour
                 {
                     isPersonDouble = false;
                     brawlerDropImageRewared.gameObject.SetActive(true);
-                    brawlerDropImageRewared.sprite = allBrawlers[randIndexBrawl].imageBrawler;
-                    brawlerNameDropTextRewared.text = allBrawlers[randIndexBrawl].nameBrawler;
+                    brawlerDropImageRewared.sprite = storageFighters.collectionBrawlers[randIndexBrawl].imageBrawler;
+                    brawlerNameDropTextRewared.text = storageFighters.collectionBrawlers[randIndexBrawl].nameBrawler;
                     PlayerPrefs.SetInt(PlayerAttributes.PLAYER_PREFS_KEY_NAME_BRAWLER + randIndexBrawl, 1);
+                    Events.CallAchivmentsBrawlersProgressCheck();
                 }
                 else
                 {
@@ -255,9 +254,10 @@ public class BoxesContainer : MonoBehaviour
                 {
                     isPersonDouble = false;
                     brawlerDropImageRewared.gameObject.SetActive(true);
-                    brawlerDropImageRewared.sprite = allBrawlers[randIndexBrawl].imageBrawler;
-                    brawlerNameDropTextRewared.text = allBrawlers[randIndexBrawl].nameBrawler;
+                    brawlerDropImageRewared.sprite = storageFighters.collectionBrawlers[randIndexBrawl].imageBrawler;
+                    brawlerNameDropTextRewared.text = storageFighters.collectionBrawlers[randIndexBrawl].nameBrawler;
                     PlayerPrefs.SetInt(PlayerAttributes.PLAYER_PREFS_KEY_NAME_BRAWLER + randIndexBrawl, 1);
+                    Events.CallAchivmentsBrawlersProgressCheck();
                 }
                 else
                 {
@@ -272,8 +272,8 @@ public class BoxesContainer : MonoBehaviour
                 break;
         }
 
-        dropScreenAll.personImage.sprite = allBrawlers[randIndexBrawl].imageBrawler;
-        dropScreenAll.personNameProfit.text = allBrawlers[randIndexBrawl].nameBrawler;
+        dropScreenAll.personImage.sprite = storageFighters.collectionBrawlers[randIndexBrawl].imageBrawler;
+        dropScreenAll.personNameProfit.text = storageFighters.collectionBrawlers[randIndexBrawl].nameBrawler;
 
     }
 

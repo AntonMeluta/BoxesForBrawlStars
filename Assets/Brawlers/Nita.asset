@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67af8611443f04b47b1757c0b9b96f25, type: 3}
+  m_Name: Nita
+  m_EditorClassIdentifier: 
+  nameBrawler: Nita
+  rusDescriptionBrawler: "\u041D\u0438\u0442\u0430 \u2014 \u044D\u0442\u043E \u043E\u0431\u044B\u0447\u043D\u044B\u0439
+    \u0431\u043E\u0435\u0446 \u043A\u043B\u0430\u0441\u0441\u0430 \xAB\u0412\u043E\u0438\u043D\xBB,
+    \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0432\u044B\u0434\u0430\u0451\u0442\u0441\u044F
+    \u0437\u0430 \u0434\u043E\u0441\u0442\u0438\u0436\u0435\u043D\u0438\u0435 10 \u0442\u0440\u043E\u0444\u0435\u0435\u0432
+    \u043D\u0430 \u041F\u0443\u0442\u0438 \u043A \u0441\u043B\u0430\u0432\u0435. \u0418\u043C\u0435\u0435\u0442
+    \u0441\u0440\u0435\u0434\u043D\u0435\u0435 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E
+    \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F \u0438 \u0441\u0440\u0435\u0434\u043D\u0438\u0439
+    \u0443\u0440\u043E\u043D. \u0410\u0442\u0430\u043A\u0443\u0435\u0442 \u0443\u0434\u0430\u0440\u043D\u043E\u0439
+    \u0432\u043E\u043B\u043D\u043E\u0439, \u043A\u043E\u0442\u043E\u0440\u0430\u044F
+    \u043C\u043E\u0436\u0435\u0442 \u043D\u0430\u043D\u0435\u0441\u0442\u0438 \u0443\u0440\u043E\u043D
+    \u0441\u0440\u0430\u0437\u0443 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u043C
+    \u0432\u0440\u0430\u0433\u0430\u043C. \u0415\u0451 \u0421\u0443\u043F\u0435\u0440
+    \u043F\u0440\u0438\u0437\u044B\u0432\u0430\u0435\u0442 \u043C\u0435\u0434\u0432\u0435\u0434\u044F
+    \u0441 \u0431\u043E\u043B\u044C\u0448\u0438\u043C \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E\u043C
+    \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F \u0438 \u043D\u0438\u0437\u043A\u0438\u043C
+    \u0443\u0440\u043E\u043D\u043E\u043C, \u043A\u043E\u0442\u043E\u0440\u044B\u0439
+    \u0441\u0440\u0430\u0436\u0430\u0435\u0442\u0441\u044F \u0432\u043C\u0435\u0441\u0442\u0435
+    \u0441 \u043D\u0435\u0439."
+  enDescriptionBrawler: Nita is a Common Brawler that is unlocked as a Trophy Road
+    reward upon reaching 10 Trophies. She has moderate health and attacks with shockwaves
+    that have moderate range and can hit multiple enemies. She is most notable for
+    her Super's ability to summon the "Big Baby Bear." This bear has high health and
+    quick, dangerous melee attacks. Her first Star Power, Bear with Me, heals her
+    bear for 500 health when she herself attacks the enemy, and the bear heals Nita
+    for 500 when it attacks the enemy, and her second Star Power, Hyper Bear, increases
+    the attack speed of her bear by 60%.
+  imageBrawler: {fileID: 21300000, guid: 1cae070ea3f06a349bcf7c3756073f3b, type: 3}
+  avatarBrawler: {fileID: 21300000, guid: 58bb624f4cb4a934e9dce507b99d6376, type: 3}
+  valueAttack: 3
+  valueHealth: 4
+  valueSuper: 2

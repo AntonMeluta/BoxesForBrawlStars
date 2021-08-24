@@ -66,25 +66,22 @@ public class ButtonResource : MonoBehaviour
             return;
         }
 
-        resourcesConteiner.AddGems(currentDelta, currentWhatIsResourcesGet, currentDeltaNewResource);
-        
+        resourcesConteiner.AddGems(currentDelta, currentWhatIsResourcesGet, currentDeltaNewResource);        
     }
 
     public void ActionButtonTicket()
     {
-        resourcesConteiner.AddTickets(currentDelta, currentWhatIsResourcesGet, currentDeltaNewResource);
-        
+        resourcesConteiner.AddTickets(currentDelta, currentWhatIsResourcesGet, currentDeltaNewResource);        
     }
 
     public void AdsCoinGet()
     {
-        resourcesConteiner.AddCoins(currentDelta, currentWhatIsResourcesGet, currentDeltaNewResource);
-
+        resourcesConteiner.AddCoins(currentDelta);
     }
 
     public void AdsGetGem()
     {
-        resourcesConteiner.AddGems(currentDelta, currentWhatIsResourcesGet, currentDeltaNewResource);
+        resourcesConteiner.AddGems(currentDelta);
     }
 
 

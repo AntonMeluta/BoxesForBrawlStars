@@ -7,14 +7,8 @@ using UnityEngine.Networking;
 using SimpleJSON;
 using UnityEngine.Advertisements;
 
-//NeedFix, перенести логику рейт ас в гейм менеджер или другой скрипт
 public class UnityAds : MonoBehaviour{
-
-    //rateUs
-    int isRateUS;
-    public GameObject rateUsObj;    
-    public string rateUsRef;
-
+    
     int toPrmReqst = 0;
     string getString = "";
 
@@ -39,6 +33,7 @@ public class UnityAds : MonoBehaviour{
     int isShowedGdprPanelInt;
     SystemLanguage systemLanguage;
 
+    public bool isTestMode = false;
 
     private void Awake()
     {
@@ -88,23 +83,7 @@ public class UnityAds : MonoBehaviour{
         TapConsent(false);
     }
 
-
-    public void InvokeRateUsAction()
-    {
-        isRateUS = PlayerPrefs.GetInt("isRateUS", 0);
-        if (isRateUS == 0)
-            rateUsObj.SetActive(true);
-    }
-
-    public void RateUsHere()
-    {
-        isRateUS = 1;
-        PlayerPrefs.SetInt("isRateUS", isRateUS);
-        rateUsObj.SetActive(false);
-        Application.OpenURL(rateUsRef);
-    }
-
-   
+    
     public void TapConsent(bool consentResultUser)
     {
         toPrmReqst = 0;
@@ -210,16 +189,20 @@ public class UnityAds : MonoBehaviour{
     //rewared video
     public void VideoRewSendOut()
     {
+        if (isTestMode)
+        {
+            plasticDelegate();
+            return;
+        }            
+
         if (toPrmReqst == 2)
         {
             if (Advertisement.IsReady("rewardedVideo"))
                 Advertisement.Show("rewardedVideo", optUnitAds);            
             else if (startappRewaredState)
                 adsRewaredStartapp.ShowAd();
-
             return;
         }
-
 
         if (toPrmReqst == 1 || toPrmReqst == 3)
         {
@@ -227,7 +210,6 @@ public class UnityAds : MonoBehaviour{
                 adsRewaredStartapp.ShowAd();
 
         }
-
     }
 
     public void PrivacyTransitionGo()

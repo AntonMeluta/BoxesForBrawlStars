@@ -12,10 +12,12 @@ public class AchievementsGetControl : MonoBehaviour
     public AudioController audioController;
 
     public void AddLine(string newLine)
-    {        
+    {
+        print("AddLine(string newLine)");
         if (!gameObject.activeInHierarchy)
         {
             gameObject.SetActive(true);
+            print("AddLine(string newLine)...gameObject.SetActive(true);");
             curentLine = newLine;
             textGreetingUI.text = newLine;
             audioController.PlayBrawlUnlock();                     

@@ -17,12 +17,13 @@ public class PlayerAttributes : MonoBehaviour
     public static string PLAYER_PREFS_KEY_CHEST_HOWMUCHOPENING = "chestHowMuch";
 
     public Image avatarUiIcon;
-    public string[] containerNamesBrawlersInString;
-    public Sprite[] conteinerSpritesBrawlersAll;
-    public Sprite[] conteinerSpritesAvatarsBrawlersAll;
+    public StorageFighters storageFighters;
+    public Sprite startAvatar; 
 
     public GameObject firstInputFieldSection;
     public Text textNamePlayerMainScreen;
+
+    public GameManager gameManager;
 
 
     private void Awake()
@@ -33,7 +34,7 @@ public class PlayerAttributes : MonoBehaviour
             firstInputFieldSection.SetActive(true);
             firstStart = 1;
             PlayerPrefs.SetInt(PLAYER_PREFS_FIRST_START, firstStart);
-            GameManager.instance.TransitionToLoginState();
+            gameManager.TransitionToLoginState();
         }
 
         SetNameInputField();
@@ -49,8 +50,12 @@ public class PlayerAttributes : MonoBehaviour
     void SetAvatar()
     {
         int indexAvatarCurrent = PlayerPrefs.GetInt(PLAYER_PREFS_INDEX_AVATAR, 0);
-        avatarUiIcon.sprite = conteinerSpritesAvatarsBrawlersAll[indexAvatarCurrent];
-    }        
+
+        if (indexAvatarCurrent == 0)
+            avatarUiIcon.sprite = startAvatar;
+        else
+            avatarUiIcon.sprite = storageFighters.collectionBrawlers[indexAvatarCurrent].avatarBrawler;
+    }
 }
 
 

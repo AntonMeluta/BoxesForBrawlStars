@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 public class Events
 {
@@ -6,8 +7,9 @@ public class Events
     public static Action achievmentsChestProgressCheck;
     public static Action achievmentsBrawlersProgressCheck;
 
+
     public static void CallAchivmentsResProgressCheck()
-    {
+    {       
         achievmentsResProgressCheck?.Invoke();
     }
 

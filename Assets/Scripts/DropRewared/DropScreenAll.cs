@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class DropScreenAll : MonoBehaviour
 {
-
     int counterExit;
     int counterExit2;
     UnityAds unityAds;
+    public GameManager gameManager;
     public Image resourceImage;
     public Text resourceTextProfit;
 
@@ -45,7 +45,7 @@ public class DropScreenAll : MonoBehaviour
 
         counterExit2++;
         if (counterExit2 % valueToRateUsShowing == 0)
-            unityAds.InvokeRateUsAction();
+            gameManager.InvokeRateUsAction();
 
     }
 

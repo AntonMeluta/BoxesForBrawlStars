@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
-    //Action<GameState, GameState> stateUpdated;
+    //rateUs
+    int isRateUS;
+    public GameObject rateUsObj;
+    public string rateUsRef;
 
     [SerializeField]GameState currentState;
     public GameState CurrentState
@@ -20,7 +22,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
         UpdateGameState(GameState.HomeScreen);
     }
 
@@ -48,7 +49,21 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        //stateUpdated?.Invoke(prevGameState, currentState);
+    }
+
+    public void InvokeRateUsAction()
+    {        
+        /*isRateUS = PlayerPrefs.GetInt("isRateUS", 0);
+        if (isRateUS == 0)
+            rateUsObj.SetActive(true);*/
+    }
+
+    public void RateUsHere()
+    {
+        isRateUS = 1;
+        PlayerPrefs.SetInt("isRateUS", isRateUS);
+        rateUsObj.SetActive(false);
+        Application.OpenURL(rateUsRef);
     }
 
 

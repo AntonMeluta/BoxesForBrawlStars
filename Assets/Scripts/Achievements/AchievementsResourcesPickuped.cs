@@ -3,32 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AchievementsResourcesPickuped : MonoBehaviour
+public class AchievementsResourcesPickuped : AchievementsInfo
 {
-    public ResourcesConteiner resourcesConteiner;
     public TargetPickupedResourcesEnum targetPickupedResourcesEnum;
-
-    public Slider slider;
-    public Text textSlider;
-
-    int goToTarget;
     public int needCoutResources = 1000;
-    public int rewaredCoin = 10000;
-    public int rewaredGem = 1500;
 
-    public AchievementsGetControl achievementsGetControl;
-
-    string congratulationString;
-
-    private void Awake()
+    protected override void Awake()
     {
-        LocalLang localLang = GetComponentInChildren<LocalLang>();
-
-        if (Application.systemLanguage == SystemLanguage.Russian)
-            congratulationString = "Достижение \"" + localLang.RUS + "\" получено";
-        else
-            congratulationString = "Achievement \"" + localLang.ENG + "\" received";
-
+        base.Awake();
         Events.achievmentsResProgressCheck += OnEnableWithDelay;
     }
 
@@ -67,12 +49,12 @@ public class AchievementsResourcesPickuped : MonoBehaviour
     {
         if (needCoutResources <= resourcesConteiner.gems)
         {
-            resourcesConteiner.AddGems(rewaredGem, WhatIsResourcesGet.coins, rewaredCoin);
+            Events.achievmentsResProgressCheck -= OnEnableWithDelay;
             PlayerPrefs.SetInt("sliderOpened" + gameObject.name, 1);
             slider.value = 100;
             textSlider.text = slider.value + "%";
-            Events.achievmentsResProgressCheck -= OnEnableWithDelay;
             achievementsGetControl.AddLine(congratulationString);
+            resourcesConteiner.AddGems(rewaredGem, WhatIsResourcesGet.coins, rewaredCoin);    
             return;
         }
 
@@ -86,12 +68,12 @@ public class AchievementsResourcesPickuped : MonoBehaviour
     {
         if (needCoutResources <= resourcesConteiner.coins)
         {
-            resourcesConteiner.AddCoins(rewaredCoin, WhatIsResourcesGet.gems, rewaredGem);
+            Events.achievmentsResProgressCheck -= OnEnableWithDelay;
             PlayerPrefs.SetInt("sliderOpened" + gameObject.name, 1);
             slider.value = 100;
-            textSlider.text = slider.value + "%";
-            Events.achievmentsResProgressCheck -= OnEnableWithDelay;
+            textSlider.text = slider.value + "%";            
             achievementsGetControl.AddLine(congratulationString);
+            resourcesConteiner.AddCoins(rewaredCoin, WhatIsResourcesGet.gems, rewaredGem);
             return;
         }
 
@@ -105,12 +87,12 @@ public class AchievementsResourcesPickuped : MonoBehaviour
     {
         if (needCoutResources <= resourcesConteiner.tickets)
         {
-            resourcesConteiner.AddTickets(rewaredCoin, WhatIsResourcesGet.gems, rewaredGem);
+            Events.achievmentsResProgressCheck -= OnEnableWithDelay;
             PlayerPrefs.SetInt("sliderOpened" + gameObject.name, 1);
             slider.value = 100;
-            textSlider.text = slider.value + "%";
-            Events.achievmentsResProgressCheck -= OnEnableWithDelay;
+            textSlider.text = slider.value + "%";            
             achievementsGetControl.AddLine(congratulationString);
+            resourcesConteiner.AddTickets(rewaredCoin, WhatIsResourcesGet.gems, rewaredGem);
             return;
         }
 

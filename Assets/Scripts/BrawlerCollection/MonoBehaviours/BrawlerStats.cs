@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AwakeAllBrawlerCollection : MonoBehaviour
+public class BrawlerStats : MonoBehaviour
 {
     Button button;
     Sprite fullBrawlerSprite;

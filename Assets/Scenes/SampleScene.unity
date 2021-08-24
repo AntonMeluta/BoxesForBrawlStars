@@ -294,9 +294,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 58042471}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 27
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 26
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &7748585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -900,86 +903,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32141846}
   m_CullTransparentMesh: 0
---- !u!1 &33841101
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 33841102}
-  - component: {fileID: 33841104}
-  - component: {fileID: 33841103}
-  m_Layer: 5
-  m_Name: Text (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &33841102
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33841101}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999949, y: 0.9999949, z: 0.9999949}
-  m_Children: []
-  m_Father: {fileID: 715506322}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.5, y: -271.9}
-  m_SizeDelta: {x: 257.9, y: 376.4}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &33841103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33841101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 6057d5794d4d1a94299b83a9301413dd, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 1
-    m_MaxSize: 133
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Shelly Shelly Shelly Shelly Shelly Shelly Shelly Shelly Shelly Shelly Shelly
-    Shelly Shelly '
---- !u!222 &33841104
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33841101}
-  m_CullTransparentMesh: 0
 --- !u!1 &36281975
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,7 +1365,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2488,8 +2411,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 10
+  brawlDefinition: {fileID: 11400000, guid: 82f6a625290df1d49b1dff24cc2d5022, type: 2}
+  indexBrawler: 9
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1781670105}
   RUS: "\u0411\u0440\u043E\u043A \u2014 \u043E\u0431\u044B\u0447\u043D\u044B\u0439
@@ -2643,7 +2566,6 @@ GameObject:
   - component: {fileID: 101089447}
   - component: {fileID: 101089450}
   - component: {fileID: 101089449}
-  - component: {fileID: 101089448}
   m_Layer: 5
   m_Name: TextAchievments
   m_TagString: Untagged
@@ -2670,20 +2592,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.7, y: 68.1}
   m_SizeDelta: {x: 806.9, y: 243.1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &101089448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101089446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eb6580d6f8169546903c8a2e216f20c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RUS: "\u041E\u0446\u0435\u043D\u0438\u0442\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435"
-  ENG: Rate us app
 --- !u!114 &101089449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2927,8 +2835,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 5
+  brawlDefinition: {fileID: 11400000, guid: a43cff5f1435dcb4a9411fd19766690e, type: 2}
+  indexBrawler: 4
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 265603607}
   RUS: "\u041D\u0438\u0442\u0430 \u2014 \u044D\u0442\u043E \u043E\u0431\u044B\u0447\u043D\u044B\u0439
@@ -3456,9 +3364,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1610816835}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 36
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 35
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &113541020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4284,13 +4195,14 @@ GameObject:
   - component: {fileID: 144835817}
   - component: {fileID: 144835819}
   - component: {fileID: 144835818}
+  - component: {fileID: 144835820}
   m_Layer: 5
   m_Name: AchievementsScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &144835817
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4305,7 +4217,6 @@ RectTransform:
   - {fileID: 1681474515}
   - {fileID: 1646967213}
   - {fileID: 1103297414}
-  - {fileID: 472356745}
   m_Father: {fileID: 2004634534}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4351,6 +4262,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144835816}
   m_CullTransparentMesh: 0
+--- !u!114 &144835820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144835816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96cbca0ab32caa34090be9d774e79fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &149464791
 GameObject:
   m_ObjectHideFlags: 0
@@ -4384,7 +4307,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4553,15 +4476,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a99e363d4b575843a27d23e7a0b578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxesContainer: {fileID: 1306513821}
-  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
-  typeBrawler: 6
   slider: {fileID: 755248349}
   textSlider: {fileID: 888741989}
   rewaredCoin: 15000
   rewaredGem: 7000
   achievementsGetControl: {fileID: 1713036273}
+  boxesContainer: {fileID: 1306513821}
+  storageFighters: {fileID: 957668250}
+  typeBrawler: 6
 --- !u!114 &159418801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5214,9 +5137,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 85097417}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 1
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 0
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &174963062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5432,8 +5358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb6580d6f8169546903c8a2e216f20c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RUS: "\u041F\u043E\u043B\u0443\u0447\u0438 1000 \u0431\u0438\u043B\u0435\u0442\u043E\u0432"
-  ENG: Open 1000 tickets
+  RUS: "\u041F\u043E\u043B\u0443\u0447\u0438 300 \u0431\u0438\u043B\u0435\u0442\u043E\u0432"
+  ENG: Open 300 tickets
 --- !u!114 &177285651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5467,7 +5393,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Be open 1000 tickets
+  m_Text: Be open 300 tickets
 --- !u!222 &177285652
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6004,7 +5930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcesButton: 1
   currentDelta: -10000
-  currentWhatIsResourcesGet: 3
+  currentWhatIsResourcesGet: 2
   currentDeltaNewResource: 90
   isAdsButton: 0
 --- !u!1 &212314784
@@ -6134,8 +6060,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 22
+  brawlDefinition: {fileID: 11400000, guid: baafbcea2f58ce94ea1088dd60c9ef22, type: 2}
+  indexBrawler: 21
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1111940102}
   RUS: "\u0411\u0438\u0431\u0438 \u2013 \u044D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -6684,10 +6610,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23891d672642cf84196cd4e884a288a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rateUsObj: {fileID: 221304532}
-  rateUsRef: https://play.google.com/store/apps/developer?id=Human+adventure+game
   gdprConsentScreen: {fileID: 982100079}
   privacyRef: https://sites.google.com/view/human-neighborflat
+  isTestMode: 1
 --- !u!4 &222294811
 Transform:
   m_ObjectHideFlags: 0
@@ -6917,8 +6842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 20
+  brawlDefinition: {fileID: 11400000, guid: 51c3138b8700f36468cb6524009a975b, type: 2}
+  indexBrawler: 19
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 649388742}
   RUS: "\u0420\u0438\u043A\u043E \u2013 \u0441\u0432\u0435\u0440\u0445\u0440\u0435\u0434\u043A\u0438\u0439
@@ -7623,8 +7548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 7
+  brawlDefinition: {fileID: 11400000, guid: a41ffcb9ec43089448467fd26e7e3546, type: 2}
+  indexBrawler: 6
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1866732074}
   RUS: "\u0414\u0438\u043D\u0430\u043C\u0430\u0439\u043A \u0431\u0440\u043E\u0441\u0430\u0435\u0442
@@ -7848,8 +7773,8 @@ RectTransform:
   m_Father: {fileID: 1245106005}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8433,8 +8358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 16
+  brawlDefinition: {fileID: 11400000, guid: 39ac9d5ba13c5cf418a10fcf4af81e84, type: 2}
+  indexBrawler: 15
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 506819021}
   RUS: "\u041A\u0430\u0440\u043B - \u044D\u0442\u043E \u0441\u0432\u0435\u0440\u0445\u0440\u0435\u0434\u043A\u0438\u0439
@@ -8800,7 +8725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcesButton: 1
   currentDelta: -500
-  currentWhatIsResourcesGet: 3
+  currentWhatIsResourcesGet: 2
   currentDeltaNewResource: 5
   isAdsButton: 0
 --- !u!1 &265603607
@@ -9013,13 +8938,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourcesConteiner: {fileID: 1280626559}
-  targetPickupedResourcesEnum: 1
   slider: {fileID: 1465080874}
   textSlider: {fileID: 1227187001}
-  needCoutResources: 8000
   rewaredCoin: 15000
   rewaredGem: 500
   achievementsGetControl: {fileID: 1713036273}
+  targetPickupedResourcesEnum: 1
+  needCoutResources: 8000
 --- !u!1 &266345327
 GameObject:
   m_ObjectHideFlags: 0
@@ -9090,7 +9015,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ANTON
+  m_Text: PLAYER
 --- !u!222 &266345330
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9154,13 +9079,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourcesConteiner: {fileID: 1280626559}
-  indexChestStatus: 3
-  needCountOpeningAction: 100
   slider: {fileID: 597195824}
   textSlider: {fileID: 1883920463}
   rewaredCoin: 20000
   rewaredGem: 10000
   achievementsGetControl: {fileID: 1713036273}
+  indexChestStatus: 3
+  needCountOpeningAction: 100
 --- !u!114 &266788121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9525,8 +9450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 24
+  brawlDefinition: {fileID: 11400000, guid: 8a61d855a757e544686b6d91d9b7574d, type: 2}
+  indexBrawler: 23
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 113453361}
   RUS: "\u041D\u0430\u043D\u0438 \u2014 \u044D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -9671,80 +9596,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278587176}
-  m_CullTransparentMesh: 0
---- !u!1 &278646782
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 278646783}
-  - component: {fileID: 278646785}
-  - component: {fileID: 278646784}
-  m_Layer: 5
-  m_Name: Icon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &278646783
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278646782}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3894373, y: 1.3894373, z: 1.3894373}
-  m_Children: []
-  m_Father: {fileID: 715506322}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 95, y: 149}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 1, y: 1}
---- !u!114 &278646784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278646782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 508b7276e5631294ab35b053b5a7775c, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &278646785
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278646782}
   m_CullTransparentMesh: 0
 --- !u!1 &283071789
 GameObject:
@@ -10059,8 +9910,8 @@ RectTransform:
   m_Father: {fileID: 942403586}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10650,8 +10501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 2
+  brawlDefinition: {fileID: 11400000, guid: b53007a35ab1665409b423bdcf36fa8d, type: 2}
+  indexBrawler: 1
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 598651111}
   RUS: "8-\u0411\u0418\u0422 \u2014 \u044D\u0442\u043E \u043E\u0431\u044B\u0447\u043D\u044B\u0439
@@ -11166,8 +11017,8 @@ RectTransform:
   m_Father: {fileID: 414719259}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11319,8 +11170,8 @@ RectTransform:
   m_Father: {fileID: 1012398644}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12047,8 +11898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 35
+  brawlDefinition: {fileID: 11400000, guid: 6e3eac1a6854e674ebbf91476055c8e0, type: 2}
+  indexBrawler: 34
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1075169255}
   RUS: "\u0421\u044D\u043D\u0434\u0438 \u2014 \u043B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0439
@@ -12233,8 +12084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 6
+  brawlDefinition: {fileID: 11400000, guid: 323ee4a2eb5947f4ebb26c89d5814b90, type: 2}
+  indexBrawler: 5
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1255486120}
   RUS: "\u0411\u043E \u2014 \u044D\u0442\u043E \u043E\u0431\u044B\u0447\u043D\u044B\u0439
@@ -12402,8 +12253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 28
+  brawlDefinition: {fileID: 11400000, guid: 07a812797c69e2a4498f921ed61edc32, type: 2}
+  indexBrawler: 27
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 126443694}
   RUS: "\u041C\u0430\u043A\u0441 \u2014 \u043C\u0438\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -12864,8 +12715,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 38
+  brawlDefinition: {fileID: 11400000, guid: d29930ae250d00245bc03496fabfd571, type: 2}
+  indexBrawler: 37
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1559723426}
   RUS: "\u0413\u044D\u0439\u043B \u2014 \u0445\u0440\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -14504,7 +14355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcesButton: 0
   currentDelta: -600
-  currentWhatIsResourcesGet: 2
+  currentWhatIsResourcesGet: 1
   currentDeltaNewResource: 120
   isAdsButton: 0
 --- !u!1 &412682849
@@ -14689,9 +14540,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 2041196766}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 11
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 10
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &412720827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15022,9 +14876,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 780823488}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 29
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 28
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &425501826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15981,103 +15838,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &472356744
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 472356745}
-  - component: {fileID: 472356748}
-  - component: {fileID: 472356747}
-  - component: {fileID: 472356746}
-  m_Layer: 5
-  m_Name: BrawlerInfo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &472356745
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472356744}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 925366338}
-  - {fileID: 1549431245}
-  - {fileID: 715506322}
-  - {fileID: 558658056}
-  m_Father: {fileID: 144835817}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &472356746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472356744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e488ac352d5ecde4a9b19e0f4bef579a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameHeaderBrawlerText: {fileID: 476923766}
-  infoBrawlerFieldText: {fileID: 33841103}
-  imageBrawlerFull: {fileID: 0}
-  sliderAttackValue: {fileID: 0}
-  sliderHealthValue: {fileID: 0}
-  sliderSuperValue: {fileID: 0}
---- !u!114 &472356747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472356744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.49247953, g: 0.75634146, b: 0.8773585, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f0b759078ed204a478c81ff750903713, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &472356748
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472356744}
-  m_CullTransparentMesh: 0
 --- !u!1 &474582372
 GameObject:
   m_ObjectHideFlags: 0
@@ -16153,85 +15913,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474582372}
-  m_CullTransparentMesh: 0
---- !u!1 &476923764
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 476923765}
-  - component: {fileID: 476923767}
-  - component: {fileID: 476923766}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &476923765
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476923764}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 715506322}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 3.7}
-  m_SizeDelta: {x: 244.9, y: 116.8}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &476923766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476923764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 6057d5794d4d1a94299b83a9301413dd, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 1
-    m_MaxSize: 133
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Shelly
---- !u!222 &476923767
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476923764}
   m_CullTransparentMesh: 0
 --- !u!1 &481616405
 GameObject:
@@ -17299,8 +16980,8 @@ RectTransform:
   m_Father: {fileID: 914603802}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -17616,8 +17297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 27
+  brawlDefinition: {fileID: 11400000, guid: 788413c31d8f7554ea466cd2f7c1f3a4, type: 2}
+  indexBrawler: 26
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 12378425}
   RUS: "\u0414\u0436\u0438\u043D \u2014 \u044D\u0442\u043E \u043C\u0438\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -18222,15 +17903,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a99e363d4b575843a27d23e7a0b578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxesContainer: {fileID: 1306513821}
-  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
-  typeBrawler: 1
   slider: {fileID: 1059508190}
   textSlider: {fileID: 1139529285}
   rewaredCoin: 3000
   rewaredGem: 500
   achievementsGetControl: {fileID: 1713036273}
+  boxesContainer: {fileID: 1306513821}
+  storageFighters: {fileID: 957668250}
+  typeBrawler: 1
 --- !u!114 &537781175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18829,7 +18510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcesButton: 0
   currentDelta: -3000
-  currentWhatIsResourcesGet: 2
+  currentWhatIsResourcesGet: 1
   currentDeltaNewResource: 600
   isAdsButton: 0
 --- !u!1 &553640095
@@ -18911,211 +18592,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553640095}
   m_CullTransparentMesh: 0
---- !u!1001 &558658055
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 472356745}
-    m_Modifications:
-    - target: {fileID: 1777705156579357502, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_Name
-      value: ParametresBrawler
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 14.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 327.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 392.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156579357496, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 144835816}
-    - target: {fileID: 1777705155363506318, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705155363506318, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705155417424647, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705155417424647, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705155417424647, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705155468496191, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705155468496191, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705157282033319, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705157282033319, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705157282033319, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156608800689, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705156608800689, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705155980484852, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705155980484852, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777705155980484852, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2e3948b1b71535d47a5fd42deeb2906d, type: 3}
---- !u!224 &558658056 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1777705156579357497, guid: 2e3948b1b71535d47a5fd42deeb2906d,
-    type: 3}
-  m_PrefabInstance: {fileID: 558658055}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &559548807
 GameObject:
   m_ObjectHideFlags: 0
@@ -19996,15 +19472,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a99e363d4b575843a27d23e7a0b578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxesContainer: {fileID: 1306513821}
-  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
-  typeBrawler: 3
   slider: {fileID: 1987088684}
   textSlider: {fileID: 284459673}
   rewaredCoin: 7000
   rewaredGem: 1000
   achievementsGetControl: {fileID: 1713036273}
+  boxesContainer: {fileID: 1306513821}
+  storageFighters: {fileID: 957668250}
+  typeBrawler: 3
 --- !u!114 &584321449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20217,15 +19693,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a99e363d4b575843a27d23e7a0b578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxesContainer: {fileID: 1306513821}
-  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
-  typeBrawler: 0
   slider: {fileID: 137866026}
   textSlider: {fileID: 1198482865}
   rewaredCoin: 20000
   rewaredGem: 10000
   achievementsGetControl: {fileID: 1713036273}
+  boxesContainer: {fileID: 1306513821}
+  storageFighters: {fileID: 957668250}
+  typeBrawler: 0
 --- !u!1 &588599120
 GameObject:
   m_ObjectHideFlags: 0
@@ -21365,9 +20841,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1242546244}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 31
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 30
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &617816851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21698,9 +21177,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 187315514}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 32
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 31
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &638003859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22035,8 +21517,8 @@ RectTransform:
   m_Father: {fileID: 365280124}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -22723,9 +22205,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 844709599}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 35
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 34
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &686941797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22995,8 +22480,8 @@ RectTransform:
   m_Father: {fileID: 1869987647}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -23130,137 +22615,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715054256}
-  m_CullTransparentMesh: 0
---- !u!1 &715506321
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 715506322}
-  - component: {fileID: 715506325}
-  - component: {fileID: 715506324}
-  - component: {fileID: 715506323}
-  m_Layer: 5
-  m_Name: InfoAboutBrawler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &715506322
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715506321}
-  m_LocalRotation: {x: -0, y: -0, z: 0.047975212, w: 0.99884856}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.624345, y: 0.624345, z: 0.624345}
-  m_Children:
-  - {fileID: 476923765}
-  - {fileID: 278646783}
-  - {fileID: 33841102}
-  m_Father: {fileID: 472356745}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.5000005}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -23, y: 92.99997}
-  m_SizeDelta: {x: 327.4, y: 124.2}
-  m_Pivot: {x: 0, y: 0.5}
---- !u!114 &715506323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715506321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 715506324}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 144835816}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &715506324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715506321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1ff65012a324b674fac270ee9228b608, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &715506325
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715506321}
   m_CullTransparentMesh: 0
 --- !u!1 &716645825
 GameObject:
@@ -23613,7 +22967,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -24544,7 +23898,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -24847,9 +24201,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 2017462456}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 28
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 27
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &771588863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25074,9 +24431,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 57772544}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 30
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 29
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &777162465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25728,8 +25088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 18
+  brawlDefinition: {fileID: 11400000, guid: d98087423ad8c1640a34065f41bb9b9b, type: 2}
+  indexBrawler: 17
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 610285606}
   RUS: "\u0414\u0436\u0435\u043A\u0438 \u2014 \u0441\u0432\u0435\u0440\u0445\u0440\u0435\u0434\u043A\u0438\u0439
@@ -26359,9 +25719,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1129580357}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 10
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 9
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &796522764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27069,6 +26432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c1b55775daac240b6cb9f3c026118d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 2138836253}
   resourceImage: {fileID: 300163111}
   resourceTextProfit: {fileID: 40645865}
   personImage: {fileID: 259394358}
@@ -27127,8 +26491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 37
+  brawlDefinition: {fileID: 11400000, guid: 14a930212f52dc146aa9380975f296fd, type: 2}
+  indexBrawler: 36
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 241947719}
   RUS: "\u0412\u043E\u043B\u044C\u0442 \u2014 \u0445\u0440\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -27886,7 +27250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcesButton: 1
   currentDelta: -3000
-  currentWhatIsResourcesGet: 3
+  currentWhatIsResourcesGet: 2
   currentDeltaNewResource: 30
   isAdsButton: 0
 --- !u!1 &859642008
@@ -28989,9 +28353,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1107394967}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 21
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 20
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &892890434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29164,7 +28531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcesButton: 0
   currentDelta: -8000
-  currentWhatIsResourcesGet: 2
+  currentWhatIsResourcesGet: 1
   currentDeltaNewResource: 1500
   isAdsButton: 0
 --- !u!1 &898148203
@@ -29200,7 +28567,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -29393,8 +28760,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1295750056}
   m_HandleRect: {fileID: 1295750055}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.3280982
+  m_Value: 0.9999998
+  m_Size: 0.32809815
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -29965,7 +29332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcesButton: 0
   currentDelta: -300
-  currentWhatIsResourcesGet: 2
+  currentWhatIsResourcesGet: 1
   currentDeltaNewResource: 60
   isAdsButton: 0
 --- !u!1 &914603801
@@ -30112,9 +29479,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1531202830}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 37
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 36
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &916689984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30516,9 +29886,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1184677563}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 15
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 14
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &918787241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30556,135 +29929,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918787237}
   m_CullTransparentMesh: 0
---- !u!1 &925366337
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 925366338}
-  - component: {fileID: 925366341}
-  - component: {fileID: 925366340}
-  - component: {fileID: 925366339}
-  m_Layer: 5
-  m_Name: ' BackButton'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &925366338
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925366337}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6243437, y: 0.6243437, z: 0.6243437}
-  m_Children:
-  - {fileID: 1146271053}
-  m_Father: {fileID: 472356745}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 19.399902, y: -12.299927}
-  m_SizeDelta: {x: 103.42, y: 86.37}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &925366339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925366337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 925366340}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 472356744}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &925366340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925366337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1ff65012a324b674fac270ee9228b608, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &925366341
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925366337}
-  m_CullTransparentMesh: 0
 --- !u!1 &925876003
 GameObject:
   m_ObjectHideFlags: 0
@@ -30718,7 +29962,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -30812,8 +30056,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 14
+  brawlDefinition: {fileID: 11400000, guid: 13f5df6cfe4aebc4aac9a68e9bc9b83e, type: 2}
+  indexBrawler: 13
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 499318630}
   RUS: "\u041F\u043E\u043A\u043E \u2014 \u0440\u0435\u0434\u043A\u0438\u0439 \u0431\u043E\u0435\u0446
@@ -31632,9 +30876,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 18378661}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 7
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 6
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &957413662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31681,6 +30928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 957668249}
+  - component: {fileID: 957668250}
   m_Layer: 0
   m_Name: StorageFighters
   m_TagString: Untagged
@@ -31695,13 +30943,64 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957668248}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 2076649259}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &957668250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957668248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b8d05efbed6f344bdcfbc6e51cefcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectionBrawlers:
+  - {fileID: 11400000, guid: f347e3d5146c27c4ea8849ff26c98fb4, type: 2}
+  - {fileID: 11400000, guid: b53007a35ab1665409b423bdcf36fa8d, type: 2}
+  - {fileID: 11400000, guid: c36093af5dfb13440941c0ad5f4a9fa2, type: 2}
+  - {fileID: 11400000, guid: 005dcda72c2ca1c45bbbd050eb09087c, type: 2}
+  - {fileID: 11400000, guid: a43cff5f1435dcb4a9411fd19766690e, type: 2}
+  - {fileID: 11400000, guid: 323ee4a2eb5947f4ebb26c89d5814b90, type: 2}
+  - {fileID: 11400000, guid: a41ffcb9ec43089448467fd26e7e3546, type: 2}
+  - {fileID: 11400000, guid: d5bf4824592aa8e4f897ab4c4091c91d, type: 2}
+  - {fileID: 11400000, guid: df02195cf693ec646ae22e26625502d9, type: 2}
+  - {fileID: 11400000, guid: 82f6a625290df1d49b1dff24cc2d5022, type: 2}
+  - {fileID: 11400000, guid: 708d219c6a595ad4ba8811fe24bc69e2, type: 2}
+  - {fileID: 11400000, guid: ea2359ab6b09352468378739b9e6cdfc, type: 2}
+  - {fileID: 11400000, guid: 305c8257cc927a744a38bfbfbcf17d37, type: 2}
+  - {fileID: 11400000, guid: 13f5df6cfe4aebc4aac9a68e9bc9b83e, type: 2}
+  - {fileID: 11400000, guid: 69a0459a75cf45047b47c98a2aeb5bbf, type: 2}
+  - {fileID: 11400000, guid: 39ac9d5ba13c5cf418a10fcf4af81e84, type: 2}
+  - {fileID: 11400000, guid: e94bf836601d6ab4f91c2cee977983e9, type: 2}
+  - {fileID: 11400000, guid: d98087423ad8c1640a34065f41bb9b9b, type: 2}
+  - {fileID: 11400000, guid: 15a0dc670e1430040845417acd361e74, type: 2}
+  - {fileID: 11400000, guid: 51c3138b8700f36468cb6524009a975b, type: 2}
+  - {fileID: 11400000, guid: 41a26a7ed8766664b967a1f9860061d3, type: 2}
+  - {fileID: 11400000, guid: baafbcea2f58ce94ea1088dd60c9ef22, type: 2}
+  - {fileID: 11400000, guid: 3fa73250ad2e0a249b682ad1c1262631, type: 2}
+  - {fileID: 11400000, guid: 8a61d855a757e544686b6d91d9b7574d, type: 2}
+  - {fileID: 11400000, guid: 037d4e082b6496b40a12c5bb699ac0a8, type: 2}
+  - {fileID: 11400000, guid: 007eb3032e96a3a44803549f6a7f5413, type: 2}
+  - {fileID: 11400000, guid: 788413c31d8f7554ea466cd2f7c1f3a4, type: 2}
+  - {fileID: 11400000, guid: 07a812797c69e2a4498f921ed61edc32, type: 2}
+  - {fileID: 11400000, guid: 12742ff7d64327d4895a884a342791e2, type: 2}
+  - {fileID: 11400000, guid: 98d3e28670cdfb247a7369db6d18b261, type: 2}
+  - {fileID: 11400000, guid: 3d1ca529cbe5e154a81aa640958150d1, type: 2}
+  - {fileID: 11400000, guid: 1b978c241b20e1f478b880d97509b090, type: 2}
+  - {fileID: 11400000, guid: 093516ae9699d154dafed2d25d1351dd, type: 2}
+  - {fileID: 11400000, guid: 2de8502e7e5308649999ad2919746d05, type: 2}
+  - {fileID: 11400000, guid: 6e3eac1a6854e674ebbf91476055c8e0, type: 2}
+  - {fileID: 11400000, guid: 24c5238fbfaff2b41806296f6ca23508, type: 2}
+  - {fileID: 11400000, guid: 14a930212f52dc146aa9380975f296fd, type: 2}
+  - {fileID: 11400000, guid: d29930ae250d00245bc03496fabfd571, type: 2}
 --- !u!1 &959272729
 GameObject:
   m_ObjectHideFlags: 0
@@ -32010,7 +31309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcesButton: 0
   currentDelta: -50
-  currentWhatIsResourcesGet: 2
+  currentWhatIsResourcesGet: 1
   currentDeltaNewResource: 10
   isAdsButton: 0
 --- !u!1 &960507763
@@ -32068,9 +31367,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1345550452}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 4
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 3
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &960507766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32387,8 +31689,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 23
+  brawlDefinition: {fileID: 11400000, guid: 3fa73250ad2e0a249b682ad1c1262631, type: 2}
+  indexBrawler: 22
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 376544164}
   RUS: "\u0424\u0440\u044D\u043D\u043A \u2014 \u044D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -32629,8 +31931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 29
+  brawlDefinition: {fileID: 11400000, guid: 12742ff7d64327d4895a884a342791e2, type: 2}
+  indexBrawler: 28
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 996913640}
   RUS: "\u041C\u043E\u0440\u0442\u0438\u0441 \u2014 \u043C\u0438\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -32868,8 +32170,8 @@ RectTransform:
   m_Father: {fileID: 2012428094}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -33396,9 +32698,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 522652644}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 19
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 18
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1011271993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34633,8 +33938,8 @@ RectTransform:
   m_Father: {fileID: 651540367}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -35232,8 +34537,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 9
+  brawlDefinition: {fileID: 11400000, guid: df02195cf693ec646ae22e26625502d9, type: 2}
+  indexBrawler: 8
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1643905519}
   RUS: "\u0411\u0443\u043B\u043B \u2014 \u043E\u0431\u044B\u0447\u043D\u044B\u0439
@@ -36140,9 +35445,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 633219812}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 38
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 37
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1107366216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37779,8 +37087,8 @@ RectTransform:
   m_Father: {fileID: 1422557888}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -37820,80 +37128,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145678639}
-  m_CullTransparentMesh: 0
---- !u!1 &1146271052
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1146271053}
-  - component: {fileID: 1146271055}
-  - component: {fileID: 1146271054}
-  m_Layer: 5
-  m_Name: Icon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1146271053
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146271052}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4589092, y: 1.4589092, z: 1.4589092}
-  m_Children: []
-  m_Father: {fileID: 925366338}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000011444092, y: 0}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1146271054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146271052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 41bc5d0324757c7439b419ae5397a50e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &1146271055
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146271052}
   m_CullTransparentMesh: 0
 --- !u!1 &1149576865
 GameObject:
@@ -38207,13 +37441,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourcesConteiner: {fileID: 1280626559}
-  targetPickupedResourcesEnum: 0
   slider: {fileID: 604344623}
   textSlider: {fileID: 264501917}
-  needCoutResources: 3000
   rewaredCoin: 1000
   rewaredGem: 5000
   achievementsGetControl: {fileID: 1713036273}
+  targetPickupedResourcesEnum: 0
+  needCoutResources: 3000
 --- !u!114 &1152225859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38704,7 +37938,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -39398,7 +38632,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -40428,8 +39662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 4
+  brawlDefinition: {fileID: 11400000, guid: 005dcda72c2ca1c45bbbd050eb09087c, type: 2}
+  indexBrawler: 3
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1756318259}
   RUS: "\u041A\u043E\u043B\u044C\u0442 \u2013 \u044D\u0442\u043E \u043E\u0431\u044B\u0447\u043D\u044B\u0439
@@ -40598,8 +39832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 36
+  brawlDefinition: {fileID: 11400000, guid: 24c5238fbfaff2b41806296f6ca23508, type: 2}
+  indexBrawler: 35
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1458667697}
   RUS: "\u0421\u043F\u0430\u0439\u043A \u2013 \u043B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0439
@@ -42923,13 +42157,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourcesConteiner: {fileID: 1280626559}
-  indexChestStatus: 0
-  needCountOpeningAction: 100
   slider: {fileID: 909178824}
   textSlider: {fileID: 1829911478}
   rewaredCoin: 1000
   rewaredGem: 400
   achievementsGetControl: {fileID: 1713036273}
+  indexChestStatus: 0
+  needCountOpeningAction: 100
 --- !u!114 &1274610910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43117,9 +42351,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 2136941268}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 17
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 16
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1277600334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43310,8 +42547,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1312280117}
-  m_RootOrder: 3
+  m_Father: {fileID: 2076649259}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1281273334
 GameObject:
@@ -43421,9 +42658,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1993579976}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 5
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 4
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1281273338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43757,8 +42997,8 @@ RectTransform:
   m_Father: {fileID: 1428945024}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.6719018}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -43979,7 +43219,7 @@ GameObject:
   - component: {fileID: 1306513822}
   - component: {fileID: 1306513821}
   m_Layer: 0
-  m_Name: BoxesContainer
+  m_Name: BoxesController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43997,7 +43237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932802007a8f50d40b7b6b25ac194713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allBrawlers: []
+  storageFighters: {fileID: 957668250}
   dropScreenAll: {fileID: 1638283677}
   dropsScreenAll_Extra: {fileID: 817280455}
   imageBoxesUi: {fileID: 540878584}
@@ -44020,14 +43260,14 @@ MonoBehaviour:
   highBorderCoinAll: 30
   brawlerDropImageRewared: {fileID: 142417896}
   brawlerNameDropTextRewared: {fileID: 1659858891}
-  lowIndexDropBox1: 1
-  highIndexDropBox1: 12
-  lowIndexDropBox2: 12
-  highIndexDropBox2: 21
-  lowIndexDropBox3: 21
-  highIndexDropBox3: 33
-  lowIndexDropBox4: 33
-  highIndexDropBox4: 39
+  lowIndexDropBox1: 0
+  highIndexDropBox1: 11
+  lowIndexDropBox2: 11
+  highIndexDropBox2: 20
+  lowIndexDropBox3: 20
+  highIndexDropBox3: 32
+  lowIndexDropBox4: 32
+  highIndexDropBox4: 38
   forCoinsChest: 500
   forGemsChest: 300
   animatorsBoxes:
@@ -44050,7 +43290,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1312280117}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1312280116
 GameObject:
@@ -44081,11 +43321,10 @@ Transform:
   m_Children:
   - {fileID: 1118414174}
   - {fileID: 222294811}
-  - {fileID: 1306513822}
-  - {fileID: 1280626560}
   - {fileID: 2138836252}
+  - {fileID: 1306513822}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1314321530
 GameObject:
@@ -44570,8 +43809,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 32
+  brawlDefinition: {fileID: 11400000, guid: 1b978c241b20e1f478b880d97509b090, type: 2}
+  indexBrawler: 31
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 427326931}
   RUS: "\u0422\u0430\u0440\u0430 \u2014 \u043C\u0438\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -45081,8 +44320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 31
+  brawlDefinition: {fileID: 11400000, guid: 3d1ca529cbe5e154a81aa640958150d1, type: 2}
+  indexBrawler: 30
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1775041373}
   RUS: "\u0421\u043F\u0440\u0430\u0443\u0442 \u2014 \u043C\u0438\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -46603,9 +45842,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1166564618}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 13
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 12
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1373705253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46697,15 +45939,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a99e363d4b575843a27d23e7a0b578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxesContainer: {fileID: 1306513821}
-  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
-  typeBrawler: 4
   slider: {fileID: 1615166913}
   textSlider: {fileID: 1045436537}
   rewaredCoin: 10000
   rewaredGem: 2000
   achievementsGetControl: {fileID: 1713036273}
+  boxesContainer: {fileID: 1306513821}
+  storageFighters: {fileID: 957668250}
+  typeBrawler: 4
 --- !u!114 &1376964247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46897,8 +46139,8 @@ RectTransform:
   m_Father: {fileID: 905613318}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -47571,9 +46813,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 237258018}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 8
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 7
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1427292761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48052,9 +47297,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1225800013}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 25
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 24
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1430824146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48145,8 +47393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 34
+  brawlDefinition: {fileID: 11400000, guid: 2de8502e7e5308649999ad2919746d05, type: 2}
+  indexBrawler: 33
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1864116884}
   RUS: "\u041B\u0435\u043E\u043D \u2014 \u043B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0439
@@ -48331,13 +47579,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourcesConteiner: {fileID: 1280626559}
-  targetPickupedResourcesEnum: 2
   slider: {fileID: 289226965}
   textSlider: {fileID: 1575008404}
-  needCoutResources: 1000
   rewaredCoin: 20000
   rewaredGem: 6000
   achievementsGetControl: {fileID: 1713036273}
+  targetPickupedResourcesEnum: 2
+  needCoutResources: 300
 --- !u!114 &1450420662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49793,13 +49041,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourcesConteiner: {fileID: 1280626559}
-  indexChestStatus: 2
-  needCountOpeningAction: 100
   slider: {fileID: 1108388771}
   textSlider: {fileID: 559548811}
   rewaredCoin: 8000
   rewaredGem: 3000
   achievementsGetControl: {fileID: 1713036273}
+  indexChestStatus: 2
+  needCountOpeningAction: 100
 --- !u!114 &1508251676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50182,9 +49430,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 734800617}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 3
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 2
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1513676387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50482,8 +49733,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 19
+  brawlDefinition: {fileID: 11400000, guid: 15a0dc670e1430040845417acd361e74, type: 2}
+  indexBrawler: 18
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1997149192}
   RUS: "\u041F\u0435\u043D\u043D\u0438 \u2014 \u0441\u0432\u0435\u0440\u0445\u0440\u0435\u0434\u043A\u0438\u0439
@@ -50924,155 +50175,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547958315}
-  m_CullTransparentMesh: 0
---- !u!1 &1549431244
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1549431245}
-  - component: {fileID: 1549431250}
-  - component: {fileID: 1549431249}
-  - component: {fileID: 1549431248}
-  - component: {fileID: 1549431247}
-  - component: {fileID: 1549431246}
-  m_Layer: 5
-  m_Name: Brawler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1549431245
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549431244}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5562048, y: 2.5562048, z: 2.5562048}
-  m_Children: []
-  m_Father: {fileID: 472356745}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 16.000004}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1549431246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549431244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &1549431247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549431244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.6862745}
-  m_EffectDistance: {x: 3.78, y: -1.98}
-  m_UseGraphicAlpha: 1
---- !u!114 &1549431248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549431244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1549431249}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1549431249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549431244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9258f6f3fb84d474fbc011fe5e9e3556, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &1549431250
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549431244}
   m_CullTransparentMesh: 0
 --- !u!1 &1549933901
 GameObject:
@@ -51596,7 +50698,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -52232,9 +51334,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 458788021}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 16
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 15
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1577219850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52463,7 +51568,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -53221,9 +52326,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 440437822}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 20
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 19
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1623436422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53429,6 +52537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c1b55775daac240b6cb9f3c026118d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 2138836253}
   resourceImage: {fileID: 76271534}
   resourceTextProfit: {fileID: 1252565317}
   personImage: {fileID: 404583873}
@@ -53500,8 +52609,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 21
+  brawlDefinition: {fileID: 11400000, guid: 41a26a7ed8766664b967a1f9860061d3, type: 2}
+  indexBrawler: 20
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1506655531}
   RUS: "\u0411\u0435\u0430 \u2014 \u044D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -53770,128 +52879,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avatarUiIcon: {fileID: 1742350583}
-  containerNamesBrawlersInString:
-  - PLAYER
-  - Shelly
-  - 8-bit
-  - Emz
-  - Colt
-  - Nita
-  - Bo
-  - Dynomike
-  - Jessie
-  - Bull
-  - Brock
-  - Tick
-  - Barley
-  - El Primo
-  - Poco
-  - Rosa
-  - Carl
-  - Darryl
-  - Jacky
-  - Penny
-  - Rico
-  - Bea
-  - Bibi
-  - Frank
-  - Nani
-  - Pam
-  - Piper
-  - Gene
-  - Max
-  - Mortis
-  - Mr. P
-  - Sprout
-  - Tara
-  - Crow
-  - Leon
-  - Sandy
-  - Spike
-  - Surge
-  - Gale
-  conteinerSpritesBrawlersAll:
-  - {fileID: 21300000, guid: 9258f6f3fb84d474fbc011fe5e9e3556, type: 3}
-  - {fileID: 21300000, guid: 9258f6f3fb84d474fbc011fe5e9e3556, type: 3}
-  - {fileID: 21300000, guid: 6e570f08913b5dc41b5d677ddd390e8e, type: 3}
-  - {fileID: 21300000, guid: bc00059b78cc2ca48900a08a989efeaf, type: 3}
-  - {fileID: 21300000, guid: e86d85f7e9083b14da26c2fe81f54c9f, type: 3}
-  - {fileID: 21300000, guid: 1cae070ea3f06a349bcf7c3756073f3b, type: 3}
-  - {fileID: 21300000, guid: 5062381d62affbb419bebc54a189fdbc, type: 3}
-  - {fileID: 21300000, guid: c6dfdcf6014742f4dbfac59e05db7198, type: 3}
-  - {fileID: 21300000, guid: 562d113eabc27a34392086624f496301, type: 3}
-  - {fileID: 21300000, guid: 5246eefcb801dd74480a078da9804cac, type: 3}
-  - {fileID: 21300000, guid: 2e30157843b6278419e6f8c35505d388, type: 3}
-  - {fileID: 21300000, guid: aebb70bec04765644aba9ae810b80113, type: 3}
-  - {fileID: 21300000, guid: ecbe6ca5ae64b7b45925a681212a03d2, type: 3}
-  - {fileID: 21300000, guid: 63c9c6dab5a89e04199ee13f2ef6a5ee, type: 3}
-  - {fileID: 21300000, guid: e5c7dc6269c80974cb964df9b8eaf32c, type: 3}
-  - {fileID: 21300000, guid: 1a679273220b75045b10e9efdb4b5165, type: 3}
-  - {fileID: 21300000, guid: f4920cccf91d66f4c91f80dfacfba95b, type: 3}
-  - {fileID: 21300000, guid: 69f09307ecf4e724884389031c57bf84, type: 3}
-  - {fileID: 21300000, guid: 91a5ff572ec18c243ad229e8d1e94524, type: 3}
-  - {fileID: 21300000, guid: d032077ef322dd043929abf7081c1de9, type: 3}
-  - {fileID: 21300000, guid: 0679e9e63c5e55e4883171521019dd9c, type: 3}
-  - {fileID: 21300000, guid: 7f116782b396e3b4593a02d039314763, type: 3}
-  - {fileID: 21300000, guid: 48c24686e79603f48b8e5aa77bab2ed1, type: 3}
-  - {fileID: 21300000, guid: aad54890cb0f259459d68b25cb3d4a47, type: 3}
-  - {fileID: 21300000, guid: 489ac08982500484c9e5c6e6923d3e6d, type: 3}
-  - {fileID: 21300000, guid: 69a9fe7ffc1e64746b0a7f78f961a349, type: 3}
-  - {fileID: 21300000, guid: 323937a6e4cf7f54b8146ee61fa7ccaa, type: 3}
-  - {fileID: 21300000, guid: 186b56f43349df4418630b647180c138, type: 3}
-  - {fileID: 21300000, guid: d520491a371077446ad761e81388ff3a, type: 3}
-  - {fileID: 21300000, guid: 20049ab4e16f8f64cbde05a7bbfc0676, type: 3}
-  - {fileID: 21300000, guid: 4c05511bc42af1f48b34747a02cf63a9, type: 3}
-  - {fileID: 21300000, guid: ded7668539cf57743afee862b0969113, type: 3}
-  - {fileID: 21300000, guid: 68f25f5e3b8f0d94eac4e11d80ba5435, type: 3}
-  - {fileID: 21300000, guid: c1263a1b66b1e0645a3ecd4e9b7b0793, type: 3}
-  - {fileID: 21300000, guid: a8acf66a0a796ea4987df9480d5a24ee, type: 3}
-  - {fileID: 21300000, guid: c0c363e6f1622044fa6c0afe55d25131, type: 3}
-  - {fileID: 21300000, guid: ea208b1ddc2ce594db7e870978169cde, type: 3}
-  - {fileID: 21300000, guid: 624d31c4264d2f84fa9a1141f7fa5e0f, type: 3}
-  - {fileID: 21300000, guid: 1fe6ee3053dc22b4aa29f7b522b3abde, type: 3}
-  conteinerSpritesAvatarsBrawlersAll:
-  - {fileID: 21300000, guid: cf47eab53a70c424aad053f375a5f2e0, type: 3}
-  - {fileID: 21300000, guid: a044540833e431a47aace54f4e0e9204, type: 3}
-  - {fileID: 21300000, guid: 66f69c9ea3a3e074999c16053462aa6d, type: 3}
-  - {fileID: 21300000, guid: 2e57cdc49e4158545b8bc9e21eb18f7d, type: 3}
-  - {fileID: 21300000, guid: d1df5f0fd6ff05c42887e522e1f4a2e9, type: 3}
-  - {fileID: 21300000, guid: 58bb624f4cb4a934e9dce507b99d6376, type: 3}
-  - {fileID: 21300000, guid: 397bd27790850ca4fbf74f43a1f1e62e, type: 3}
-  - {fileID: 21300000, guid: 7ac6cd9f231b03e439ee9a50cb004350, type: 3}
-  - {fileID: 21300000, guid: 9046a3f14402de14aae9ec890f8d9065, type: 3}
-  - {fileID: 21300000, guid: 5fcdbc483f5a1354ebe3a1996cc71bf4, type: 3}
-  - {fileID: 21300000, guid: 81c6e33ff2ab61944b4250a51e6ee18c, type: 3}
-  - {fileID: 21300000, guid: 995884d7d2a4d814697da73c39aa67c9, type: 3}
-  - {fileID: 21300000, guid: 69adc4391bbb28442aedcb0ea8d11274, type: 3}
-  - {fileID: 21300000, guid: 8f03090f1bdb6334aa2957f2e85c2696, type: 3}
-  - {fileID: 21300000, guid: bf96b5889f8021443b259927defda43d, type: 3}
-  - {fileID: 21300000, guid: bae7176e1dbd86043a07749d7a282c2c, type: 3}
-  - {fileID: 21300000, guid: bdaff4b288ca4af45a81da5e73cc08d1, type: 3}
-  - {fileID: 21300000, guid: c9fbcace9568f9140b131f7b6f5d4a44, type: 3}
-  - {fileID: 21300000, guid: 8dc25749296e153438de06d61d2af0a8, type: 3}
-  - {fileID: 21300000, guid: 7b9bd9ba26a83fb42b60b37024f00a48, type: 3}
-  - {fileID: 21300000, guid: c8281b65f371483489818eda2dfbb577, type: 3}
-  - {fileID: 21300000, guid: 4a683742c170577458bdb8fcdd89332b, type: 3}
-  - {fileID: 21300000, guid: e513e33d20b3f784a9f2c8b9130d165d, type: 3}
-  - {fileID: 21300000, guid: 7647060d9392669498dfdaa9f0c94006, type: 3}
-  - {fileID: 21300000, guid: 7f6ad9b815851224ab98c8df2d8c6ed7, type: 3}
-  - {fileID: 21300000, guid: fd4150950540c6c4fa7e356dafd39d4d, type: 3}
-  - {fileID: 21300000, guid: 6df622784f6d39040b96a804a9855ea5, type: 3}
-  - {fileID: 21300000, guid: cebb7e2b3aee0e5499baf21d24776bae, type: 3}
-  - {fileID: 21300000, guid: fd5b79b5c6d18a949aead84ff71a94d2, type: 3}
-  - {fileID: 21300000, guid: 454d16e1a333bd7458de43543a5ea9a7, type: 3}
-  - {fileID: 21300000, guid: ebaf564070b3c674480d45e79b670d07, type: 3}
-  - {fileID: 21300000, guid: f3c70e10f1e15a741965ee2ad81dbc5c, type: 3}
-  - {fileID: 21300000, guid: d245a52815d38da419af3afedfca2054, type: 3}
-  - {fileID: 21300000, guid: 3b2ad7e83d6a88443a43e7a3fecc7b9e, type: 3}
-  - {fileID: 21300000, guid: b4844fd9df541be47a2ce311379da58f, type: 3}
-  - {fileID: 21300000, guid: 2d087c6dfe177224fad7efe3d566f5ec, type: 3}
-  - {fileID: 21300000, guid: 49f1f4fc91022a3468b2a7ec3b339bfa, type: 3}
-  - {fileID: 21300000, guid: b46b5e11db358184e80caf315ec4de27, type: 3}
-  - {fileID: 21300000, guid: e57d35a92e8786e4bb15c4b3ccd9ba49, type: 3}
+  storageFighters: {fileID: 957668250}
+  startAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e, type: 3}
   firstInputFieldSection: {fileID: 1216972739}
   textNamePlayerMainScreen: {fileID: 266345329}
+  gameManager: {fileID: 2138836253}
 --- !u!4 &1642539380
 Transform:
   m_ObjectHideFlags: 0
@@ -53899,12 +52891,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642539378}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 2076649259}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1643905519
 GameObject:
@@ -55089,9 +54081,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 2008996820}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 33
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 32
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1693020734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55370,9 +54365,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 392508610}
-  playerAttributes: {fileID: 1642539379}
+  storageFighters: {fileID: 957668250}
   indexBrawlerAvatar: 0
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 1
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1707485059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55459,7 +54457,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -55702,7 +54700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textGreetingUI: {fileID: 101089449}
-  audioController: {fileID: 0}
+  audioController: {fileID: 1118414173}
 --- !u!114 &1713036274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56473,9 +55471,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 168544104}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 12
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 11
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1733777048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56571,7 +55572,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 713a92f01a26a534a81a864bce15c9a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -56770,9 +55771,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 150647910}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 6
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 5
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1750566045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56843,7 +55847,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -57068,9 +56072,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1034268697}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 14
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 13
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1756448837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57400,15 +56407,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a99e363d4b575843a27d23e7a0b578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxesContainer: {fileID: 1306513821}
-  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
-  typeBrawler: 5
   slider: {fileID: 1220215421}
   textSlider: {fileID: 780322861}
   rewaredCoin: 12000
   rewaredGem: 4000
   achievementsGetControl: {fileID: 1713036273}
+  boxesContainer: {fileID: 1306513821}
+  storageFighters: {fileID: 957668250}
+  typeBrawler: 5
 --- !u!114 &1760425351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57973,8 +56980,8 @@ RectTransform:
   m_Father: {fileID: 72367225}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -58293,8 +57300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 12
+  brawlDefinition: {fileID: 11400000, guid: ea2359ab6b09352468378739b9e6cdfc, type: 2}
+  indexBrawler: 11
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 474582372}
   RUS: "\u0411\u0430\u0440\u043B\u0438 \u2014 \u0440\u0435\u0434\u043A\u0438\u0439
@@ -58462,7 +57469,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -58908,9 +57915,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1811467337
 MonoBehaviour:
@@ -59635,8 +58642,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 26
+  brawlDefinition: {fileID: 11400000, guid: 007eb3032e96a3a44803549f6a7f5413, type: 2}
+  indexBrawler: 25
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1046628084}
   RUS: "\u041F\u0430\u0439\u043F\u0435\u0440 \u2014 \u044D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -60124,8 +59131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 11
+  brawlDefinition: {fileID: 11400000, guid: 708d219c6a595ad4ba8811fe24bc69e2, type: 2}
+  indexBrawler: 10
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1905568015}
   RUS: "\u0422\u0438\u043A \u2014 \u043E\u0431\u044B\u0447\u043D\u044B\u0439 \u0431\u043E\u0435\u0446
@@ -61247,8 +60254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 8
+  brawlDefinition: {fileID: 11400000, guid: d5bf4824592aa8e4f897ab4c4091c91d, type: 2}
+  indexBrawler: 7
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 984716405}
   RUS: "\u0414\u0436\u0435\u0441\u0441\u0438 \u2014 \u044D\u0442\u043E \u043E\u0431\u044B\u0447\u043D\u044B\u0439
@@ -62741,9 +61748,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 675231103}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 18
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 17
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1929853880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63171,9 +62181,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 510360598}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 22
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 21
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1934832511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63488,8 +62501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 13
+  brawlDefinition: {fileID: 11400000, guid: 305c8257cc927a744a38bfbfbcf17d37, type: 2}
+  indexBrawler: 12
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 2143311423}
   RUS: "\u042D\u043B\u044C \u041F\u0440\u0438\u043C\u043E \u2013 \u0440\u0435\u0434\u043A\u0438\u0439
@@ -64157,9 +63170,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 884101632}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 23
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 22
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &1960278796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64616,8 +63632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 30
+  brawlDefinition: {fileID: 11400000, guid: 98d3e28670cdfb247a7369db6d18b261, type: 2}
+  indexBrawler: 29
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 387576515}
   RUS: "\u041C\u0438\u0441\u0442\u0435\u0440 \u041F. \u2014 \u043C\u0438\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -65879,9 +64895,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 2039132365}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 26
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 25
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &2003424128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66805,9 +65824,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1021715523}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 34
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 33
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &2021605256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66973,8 +65995,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 15
+  brawlDefinition: {fileID: 11400000, guid: 69a0459a75cf45047b47c98a2aeb5bbf, type: 2}
+  indexBrawler: 14
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1223367122}
   RUS: "\u0420\u043E\u0437\u0430 \u2014 \u0440\u0435\u0434\u043A\u0438\u0439 \u0431\u043E\u0435\u0446
@@ -67411,8 +66433,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 25
+  brawlDefinition: {fileID: 11400000, guid: 037d4e082b6496b40a12c5bb699ac0a8, type: 2}
+  indexBrawler: 24
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1724018162}
   RUS: "\u041F\u044D\u043C \u2014 \u044D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0439
@@ -67947,9 +66969,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 2132403712}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 9
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 8
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &2068635538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68061,6 +67086,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070990172}
   m_CullTransparentMesh: 0
+--- !u!1 &2076649258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2076649259}
+  m_Layer: 0
+  m_Name: Containers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2076649259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076649258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 957668249}
+  - {fileID: 1280626560}
+  - {fileID: 1642539380}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2079547383
 GameObject:
   m_ObjectHideFlags: 0
@@ -68106,7 +67164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000013920011, y: -0.00000026250106}
+  m_AnchoredPosition: {x: 0.0000013920011, y: 0.00012173805}
   m_SizeDelta: {x: 0, y: 1107.9}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &2081593465
@@ -68311,15 +67369,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a99e363d4b575843a27d23e7a0b578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxesContainer: {fileID: 1306513821}
-  playerAttributes: {fileID: 1642539379}
   resourcesConteiner: {fileID: 1280626559}
-  typeBrawler: 2
   slider: {fileID: 469095212}
   textSlider: {fileID: 1950284738}
   rewaredCoin: 5000
   rewaredGem: 700
   achievementsGetControl: {fileID: 1713036273}
+  boxesContainer: {fileID: 1306513821}
+  storageFighters: {fileID: 957668250}
+  typeBrawler: 2
 --- !u!114 &2082915423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68716,8 +67774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 1
+  brawlDefinition: {fileID: 11400000, guid: f347e3d5146c27c4ea8849ff26c98fb4, type: 2}
+  indexBrawler: 0
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 128719396}
   RUS: "\u0428\u0435\u043B\u043B\u0438 \u2014 \u044D\u0442\u043E \u043D\u0430\u0447\u0430\u043B\u044C\u043D\u044B\u0439
@@ -68945,8 +68003,8 @@ RectTransform:
   m_Father: {fileID: 1099647465}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -69095,9 +68153,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1603372138}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 24
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 23
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &2104711489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69188,8 +68249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 3
+  brawlDefinition: {fileID: 11400000, guid: c36093af5dfb13440941c0ad5f4a9fa2, type: 2}
+  indexBrawler: 2
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 1430633584}
   RUS: "\u042D\u043C\u0437 - \u044D\u0442\u043E \u043E\u0431\u044B\u0447\u043D\u044B\u0439
@@ -69364,9 +68425,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 504350731}
   lockImage: {fileID: 1347495621}
-  playerAttributes: {fileID: 1642539379}
-  indexBrawlerAvatar: 2
+  storageFighters: {fileID: 957668250}
+  indexBrawlerAvatar: 1
   imageIconAvatarMajorScreen: {fileID: 1742350583}
+  isPlayerAvatar: 0
+  playerDefaultAvatar: {fileID: 21300000, guid: c78d369807d13294aa60a37e1092dc6e,
+    type: 3}
 --- !u!114 &2109566170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69510,8 +68574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 17
+  brawlDefinition: {fileID: 11400000, guid: e94bf836601d6ab4f91c2cee977983e9, type: 2}
+  indexBrawler: 16
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 672224701}
   RUS: "\u0414\u044D\u0440\u0440\u0438\u043B \u2014 \u0441\u0432\u0435\u0440\u0445\u0440\u0435\u0434\u043A\u0438\u0439
@@ -70183,8 +69247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c1fbc28fac24443a68196276d8049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brawlDefinition: {fileID: 0}
-  indexBrawler: 33
+  brawlDefinition: {fileID: 11400000, guid: 093516ae9699d154dafed2d25d1351dd, type: 2}
+  indexBrawler: 32
   brawlerInfo: {fileID: 130423382}
   lockSection: {fileID: 245066607}
   RUS: "\u0412\u043E\u0440\u043E\u043D \u2014 \u043B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0439
@@ -70578,7 +69642,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1312280117}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2138836253
 MonoBehaviour:
@@ -70592,6 +69656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0997ee94c41b1e42bdee2fd1a7c2154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rateUsObj: {fileID: 0}
+  rateUsRef: 
   currentState: 0
 --- !u!1 &2139229477
 GameObject:
@@ -70846,18 +69912,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2141753850}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1280626558}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2141753850
